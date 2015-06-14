@@ -13,7 +13,7 @@
 
 #include "../sqlite/ComandosBD.h"
 #include "../Log/Log.h"
-
+#include "../md5.h"
 
 
 
@@ -59,11 +59,11 @@ void NewUser::CreateGUIControls()
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Cadastrar"), wxPoint(113,151), wxDefaultSize, 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxSize(300,20), 0, wxDefaultValidator, _("WxEdit3"));
+	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit3"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,71), wxSize(300,20), 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit2"));
 
-	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _("yyy"), wxPoint(17,28), wxSize(300,20), 0, wxDefaultValidator, _("WxEdit1"));
+	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _("yyy"), wxPoint(17,27), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit1"));
 
 	WxStaticText3 = new wxStaticText(this, ID_WXSTATICTEXT3, _("Login"), wxPoint(17,55), wxDefaultSize, 0, _("WxStaticText3"));
 
@@ -110,7 +110,7 @@ void NewUser::WxButton1Click(wxCommandEvent& event)
 	wxString login = WxEdit2->GetValue();
 	wxString senha = WxEdit3->GetValue();
 	ComandosBD* con;
-    int resultado = con->InsertSql("insert into usuarios(id, nome, login, senha) values(null,'"+nome+"' , '"+login+"', '"+senha+"');");
+    int resultado = con->InsertSql("insert into usuarios(id, nome, login, senha) values(null,'"+nome+"' , '"+login+"', '"+md5(std::string(senha.mb_str()))+"');");
     if (resultado == 1){
         wxLogMessage("Salvo com sucesso!");
         Log* S_Log;
