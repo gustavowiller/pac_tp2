@@ -1,68 +1,68 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: TP2-PAc\n"
-"POT-Creation-Date: 2015-06-14 13:55-0300\n"
-"PO-Revision-Date: 2015-06-14 13:55-0300\n"
+"Project-Id-Version: en-us\n"
+"POT-Creation-Date: 2015-06-14 15:19-0300\n"
+"PO-Revision-Date: 2015-06-14 15:22-0300\n"
 "Last-Translator: \n"
-"Language-Team: Luis, Gustavo, Diego\n"
+"Language-Team: luis, gustavo, diego\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.1\n"
 "X-Poedit-Basepath: ..\\\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: Login/LoginFrm.cpp:58
+#: Login/LoginFrm.cpp:59
 msgid "Sair"
-msgstr "Logout"
+msgstr "Close"
 
-#: Login/LoginFrm.cpp:58
+#: Login/LoginFrm.cpp:59
 msgid "WxButton2"
 msgstr ""
 
-#: Login/LoginFrm.cpp:60
+#: Login/LoginFrm.cpp:61
 msgid "Entrar"
-msgstr "login"
+msgstr "Login"
 
-#: Login/LoginFrm.cpp:60 NewUser/NewUser.cpp:60
+#: Login/LoginFrm.cpp:61 NewUser/NewUser.cpp:60
 msgid "WxButton1"
 msgstr ""
 
-#: Login/LoginFrm.cpp:62 NewUser/NewUser.cpp:64
+#: Login/LoginFrm.cpp:63 NewUser/NewUser.cpp:64
 msgid "WxEdit2"
 msgstr ""
 
-#: Login/LoginFrm.cpp:64 NewUser/NewUser.cpp:66
+#: Login/LoginFrm.cpp:65 NewUser/NewUser.cpp:66
 msgid "WxEdit1"
 msgstr ""
 
-#: Login/LoginFrm.cpp:66 NewUser/NewUser.cpp:70
+#: Login/LoginFrm.cpp:67 NewUser/NewUser.cpp:70
 msgid "Senha"
 msgstr "Key"
 
-#: Login/LoginFrm.cpp:66 NewUser/NewUser.cpp:70
+#: Login/LoginFrm.cpp:67 NewUser/NewUser.cpp:70
 msgid "WxStaticText2"
 msgstr ""
 
-#: Login/LoginFrm.cpp:68
+#: Login/LoginFrm.cpp:69
 msgid "Usurio"
 msgstr "User"
 
-#: Login/LoginFrm.cpp:68 NewUser/NewUser.cpp:72
+#: Login/LoginFrm.cpp:69 NewUser/NewUser.cpp:72
 msgid "WxStaticText1"
 msgstr ""
 
-#: Login/LoginFrm.cpp:70 NewUser/NewUser.cpp:68
+#: Login/LoginFrm.cpp:71 NewUser/NewUser.cpp:68
 msgid "Login"
 msgstr "Login"
 
 #: NewUser/NewUser.cpp:60
 msgid "Cadastrar"
-msgstr "Insert"
+msgstr "New"
 
 #: NewUser/NewUser.cpp:62
 msgid "WxEdit3"
@@ -78,67 +78,63 @@ msgstr ""
 
 #: NewUser/NewUser.cpp:72
 msgid "Nome de usurio"
-msgstr "Name"
+msgstr "Name user"
 
-#: NewUser/NewUser.cpp:74
-msgid "New User"
-msgstr "New User"
+#: NewUser/NewUser.cpp:74 Projeto1Frm.cpp:69
+msgid "Novo Usurio"
+msgstr "New user"
 
-#: Projeto1Frm.cpp:59
+#: Projeto1Frm.cpp:58
 msgid "Choose a file"
 msgstr ""
 
-#: Projeto1Frm.cpp:59
+#: Projeto1Frm.cpp:58
 msgid "*.*"
 msgstr ""
 
-#: Projeto1Frm.cpp:63
+#: Projeto1Frm.cpp:62
 msgid "Novo"
 msgstr "New"
 
-#: Projeto1Frm.cpp:64
+#: Projeto1Frm.cpp:63
 msgid "Abrir"
 msgstr "Open"
 
-#: Projeto1Frm.cpp:65
+#: Projeto1Frm.cpp:64
 msgid "Salvar"
 msgstr "Save"
 
-#: Projeto1Frm.cpp:66
+#: Projeto1Frm.cpp:65
 msgid "Fechar"
 msgstr "Close"
 
-#: Projeto1Frm.cpp:67
+#: Projeto1Frm.cpp:66
 msgid "Arquivo"
 msgstr "File"
 
 #: Projeto1Frm.cpp:70
-msgid "Novo Usurio"
-msgstr "New User"
-
-#: Projeto1Frm.cpp:71
 msgid "Acesso"
 msgstr "Access"
 
-#: Projeto1Frm.cpp:74
+#: Projeto1Frm.cpp:73
 msgid "Ajuda"
 msgstr "Help"
 
-#: Projeto1Frm.cpp:77
+#: Projeto1Frm.cpp:76
 msgid "Projeto1"
-msgstr ""
+msgstr "Project 1"
 
-#: Projeto1Frm.cpp:97
+#: Projeto1Frm.cpp:96
 msgid "Open XYZ file"
 msgstr ""
 
-#: Projeto1Frm.cpp:124
+#: Projeto1Frm.cpp:123
 msgid "Um novo arquivo foi selecionado!"
 msgstr "A new file was selected"
 
-#: Projeto1Frm.cpp:135
+#: Projeto1Frm.cpp:134
 msgid "Um arquivo foi salvo!"
-msgstr "A file was save"
+msgstr "A new  file was save"
 
 #: sqlite/wxsqlite3.cpp:4576 wxsqlite3.cpp:4576
 msgid "Regular expression invalid: '"

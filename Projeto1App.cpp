@@ -25,6 +25,11 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 bool Projeto1FrmApp::OnInit()
 {   
+    long language =  wxLANGUAGE_GERMAN; 
+    wxLocale* locale = new wxLocale();
+     
+    
+    
     //InserirUsuarios();
     wxFileSystem::AddHandler(new wxZipFSHandler);  
     //m_helpController = new wxHelpController; 
@@ -57,5 +62,6 @@ bool Projeto1FrmApp::OnInit()
 int Projeto1FrmApp::OnExit()
 {   
 	return 0;
+	exit(0);
 }
 
