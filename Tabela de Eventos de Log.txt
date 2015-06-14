@@ -1,0 +1,10 @@
+1 - Login
+2 - Login Error
+3 - Salva Novo Usuário
+4 - Menu exit 
+5 - Menu Open new Archive
+6 - Menu new Archive
+7 - Menu save Archive
+8 - Exit 
+9 - Menu New User
+10 - 
