@@ -6,9 +6,11 @@ void Log::Salva_Log(int id_u, int ev){
     wxDateTime now = wxDateTime::Now();
     wxString data_hora = now.Format();
     //wxLogMessage(data_hora);
+    
     //Converte Inteiro para Sttring
     wxString id_usuario;
     id_usuario << id_u;
+    
     wxString evento;
     evento << ev;
     ComandosBD* con;

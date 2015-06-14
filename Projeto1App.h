@@ -20,11 +20,17 @@
 	#include <wx/wxprec.h>
 #endif
 
+///WxLocale
+#include <wx/intl.h>
+
 class Projeto1FrmApp : public wxApp
 {
 	public:
 		bool OnInit();
 		int OnExit();
+		
+    protected:
+        wxLocale m_locale;
 };
 
 #endif

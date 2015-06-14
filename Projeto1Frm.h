@@ -38,7 +38,7 @@
 
 class Projeto1Frm : public wxFrame
 {
-	private:
+    private:
 		DECLARE_EVENT_TABLE();
 		
 	public:

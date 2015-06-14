@@ -78,6 +78,7 @@ void Login::CreateGUIControls()
 void Login::OnClose(wxCloseEvent& event)
 {
 	Destroy();
+	exit(0);
 }
 
 /*
@@ -88,6 +89,7 @@ void Login::WxButton2Click(wxCommandEvent& event)
 	Log* S_Log;
     S_Log->Salva_Log(1,8);
     Destroy();
+    exit(0);
 	
 }
 
@@ -104,7 +106,7 @@ void Login::WxButton1Click(wxCommandEvent& event)
     if (resultado != 0){
          //Testar Log
         Log* S_Log;
-        S_Log->Salva_Log(1,1);
+        S_Log->Salva_Log(resultado,1);
         Destroy();
     }else{
         wxLogMessage("Usuario ou senha incorreto!"); 
