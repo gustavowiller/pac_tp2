@@ -13,7 +13,7 @@
 
 #include "../sqlite/ComandosBD.h"
 #include "../Log/Log.h"
-#include "../md5.h"
+#include "../Md5/md5.h"
 
 
 
@@ -71,7 +71,7 @@ void NewUser::CreateGUIControls()
 
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("Nome de usuário"), wxPoint(17,12), wxDefaultSize, 0, _("WxStaticText1"));
 
-	SetTitle(_("New User"));
+	SetTitle(_("Novo Usuário"));
 	SetIcon(wxNullIcon);
 	SetSize(8,8,340,240);
 	Center();

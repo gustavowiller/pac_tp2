@@ -24,11 +24,7 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 
 bool Projeto1FrmApp::OnInit()
-{
-    //Kill the program
-    wxCHMHelpController *m_helpCtrl;
-    m_helpCtrl = new wxCHMHelpController;
-    
+{   
     //InserirUsuarios();
     wxFileSystem::AddHandler(new wxZipFSHandler);  
     //m_helpController = new wxHelpController; 
@@ -59,8 +55,7 @@ bool Projeto1FrmApp::OnInit()
 }
  
 int Projeto1FrmApp::OnExit()
-{
-    delete m_helpCtrl;
+{   
 	return 0;
 }
 

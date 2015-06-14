@@ -23,7 +23,6 @@
 class Projeto1FrmApp : public wxApp
 {
 	public:
-        wxCHMHelpController m_helpCtrl;
 		bool OnInit();
 		int OnExit();
 };

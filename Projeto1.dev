@@ -86,7 +86,7 @@ ProductName=
 ProductVersion=
 AutoIncBuildNrOnRebuild=0
 AutoIncBuildNrOnCompile=0
-UnitCount=18
+UnitCount=20
 
 [Profile1]
 ProfileName=MingW gcc
@@ -256,6 +256,26 @@ BuildCmd=
 
 [Unit18]
 FileName=sqlite\ComandosBD.cpp
+CompileCpp=1
+Folder=Projeto1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit19]
+FileName=Md5\md5.cpp
+CompileCpp=1
+Folder=Projeto1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit20]
+FileName=Md5\md5.h
 CompileCpp=1
 Folder=Projeto1
 Compile=1

@@ -1,14 +1,14 @@
 # Project: Projeto1
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 14/06/15 14:27
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 14/06/15 15:02
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/Projeto1App.o Objects/MingW/Projeto1Frm.o Objects/MingW/wxsqlite3.o Objects/MingW/NewUser.o Objects/MingW/LoginFrm.o Objects/MingW/Log.o Objects/MingW/ComandosBD.o Objects/MingW/Projeto1_private.res
-LINKOBJ   = "Objects/MingW/Projeto1App.o" "Objects/MingW/Projeto1Frm.o" "Objects/MingW/wxsqlite3.o" "Objects/MingW/NewUser.o" "Objects/MingW/LoginFrm.o" "Objects/MingW/Log.o" "Objects/MingW/ComandosBD.o" Objects/MingW/Projeto1_private.res
+OBJ       = Objects/MingW/Projeto1App.o Objects/MingW/Projeto1Frm.o Objects/MingW/wxsqlite3.o Objects/MingW/NewUser.o Objects/MingW/LoginFrm.o Objects/MingW/Log.o Objects/MingW/ComandosBD.o Objects/MingW/md5.o Objects/MingW/Projeto1_private.res
+LINKOBJ   = "Objects/MingW/Projeto1App.o" "Objects/MingW/Projeto1Frm.o" "Objects/MingW/wxsqlite3.o" "Objects/MingW/NewUser.o" "Objects/MingW/LoginFrm.o" "Objects/MingW/Log.o" "Objects/MingW/ComandosBD.o" "Objects/MingW/md5.o" Objects/MingW/Projeto1_private.res
 LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files (x86)/Dev-Cpp/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32 sqlite3.lib  -g3 
 INCS      = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
@@ -45,10 +45,10 @@ Objects/MingW/Projeto1Frm.o: $(GLOBALDEPS) Projeto1Frm.cpp Projeto1Frm.h icon/ic
 Objects/MingW/wxsqlite3.o: $(GLOBALDEPS) wxsqlite3.cpp sqlite3.h
 	$(CPP) -c wxsqlite3.cpp -o Objects/MingW/wxsqlite3.o $(CXXFLAGS)
 
-Objects/MingW/NewUser.o: $(GLOBALDEPS) NewUser/NewUser.cpp NewUser/NewUser.h sqlite/ComandosBD.h Log/Log.h
+Objects/MingW/NewUser.o: $(GLOBALDEPS) NewUser/NewUser.cpp NewUser/NewUser.h sqlite/ComandosBD.h Log/Log.h Md5/md5.h
 	$(CPP) -c NewUser/NewUser.cpp -o Objects/MingW/NewUser.o $(CXXFLAGS)
 
-Objects/MingW/LoginFrm.o: $(GLOBALDEPS) Login/LoginFrm.cpp Login/loginFrm.h Log/Log.h sqlite/ComandosBD.h
+Objects/MingW/LoginFrm.o: $(GLOBALDEPS) Login/LoginFrm.cpp Login/loginFrm.h Log/Log.h sqlite/ComandosBD.h Md5/md5.h
 	$(CPP) -c Login/LoginFrm.cpp -o Objects/MingW/LoginFrm.o $(CXXFLAGS)
 
 Objects/MingW/Log.o: $(GLOBALDEPS) Log/Log.cpp Log/Log.h sqlite/ComandosBD.h
@@ -56,6 +56,9 @@ Objects/MingW/Log.o: $(GLOBALDEPS) Log/Log.cpp Log/Log.h sqlite/ComandosBD.h
 
 Objects/MingW/ComandosBD.o: $(GLOBALDEPS) sqlite/ComandosBD.cpp sqlite/ComandosBD.h
 	$(CPP) -c sqlite/ComandosBD.cpp -o Objects/MingW/ComandosBD.o $(CXXFLAGS)
+
+Objects/MingW/md5.o: $(GLOBALDEPS) Md5/md5.cpp Md5/md5.h
+	$(CPP) -c Md5/md5.cpp -o Objects/MingW/md5.o $(CXXFLAGS)
 
 Objects/MingW/Projeto1_private.res: Objects/MingW/Projeto1_private.rc Projeto1App.rc 
 	$(WINDRES) --input-format=rc -o Objects/MingW/Projeto1_private.res $(RCINCS) Objects/MingW/PROJET~1.RC -O coff

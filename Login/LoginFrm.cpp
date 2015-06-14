@@ -11,7 +11,7 @@
 #include "loginFrm.h"
 #include "../Log/Log.h"
 #include "../sqlite/ComandosBD.h"
-#include "../md5.h"
+#include "../Md5/md5.h"
 
 //#include "../sqlite/ComandosBD.h"
 
