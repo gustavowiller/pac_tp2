@@ -154,28 +154,18 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit8]
-FileName=Icon\icon.h
+[Unit11]
+FileName=Login\LoginFrm.cpp
 CompileCpp=1
-Folder=
+Folder=Projeto1
 Compile=1
 Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit11]
-FileName=NewUser\NewUser.wxform
-CompileCpp=1
-Folder=Projeto1
-Compile=0
-Link=0
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit12]
-FileName=Login\LoginFrm.cpp
+FileName=Login\LoginFrm.h
 Folder=Projeto1
 Compile=1
 Link=1
@@ -185,26 +175,16 @@ BuildCmd=
 CompileCpp=1
 
 [Unit10]
-FileName=NewUser\NewUser.h
+FileName=NewUser\NewUser.wxform
 CompileCpp=1
 Folder=Projeto1
-Compile=1
-Link=1
+Compile=0
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
 [Unit13]
-FileName=Login\LoginFrm.h
-CompileCpp=1
-Folder=Projeto1
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit14]
 FileName=Login\LoginFrm.wxform
 CompileCpp=1
 Folder=Projeto1
@@ -214,9 +194,19 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit15]
+[Unit14]
 FileName=sqlite\ComandosBD.h
+CompileCpp=1
 Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit15]
+FileName=Log\Log.cpp
+Folder=Projeto1
 Compile=1
 Link=1
 Priority=1000
@@ -225,7 +215,7 @@ BuildCmd=
 CompileCpp=1
 
 [Unit9]
-FileName=NewUser\NewUser.cpp
+FileName=NewUser\NewUser.h
 CompileCpp=1
 Folder=Projeto1
 Compile=1
@@ -235,16 +225,6 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit16]
-FileName=Log\Log.cpp
-CompileCpp=1
-Folder=Projeto1
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit17]
 FileName=Log\Log.h
 CompileCpp=1
 Folder=Projeto1
@@ -254,8 +234,28 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit18]
+[Unit17]
 FileName=sqlite\ComandosBD.cpp
+CompileCpp=1
+Folder=Projeto1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit18]
+FileName=md5.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit8]
+FileName=NewUser\NewUser.cpp
 CompileCpp=1
 Folder=Projeto1
 Compile=1

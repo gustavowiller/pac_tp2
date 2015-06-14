@@ -27,3 +27,7 @@
 *.out
 *.app
 *.win
+
+Objects/
+Project1.*
+Makefile.win
