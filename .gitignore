@@ -29,7 +29,8 @@
 *.win
 
 Objects/
-Project1.*
+*.layout
+*.dev
 Makefile.win
 test.db
 
