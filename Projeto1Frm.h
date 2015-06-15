@@ -46,9 +46,12 @@ class Projeto1Frm : public wxFrame
 		void Mnuabrir1002Click(wxCommandEvent& event);
 		void Mnufechar1003Click(wxCommandEvent& event);
 		void Mnunovo1004Click(wxCommandEvent& event);
+		void Mnuajuda1008Click(wxCommandEvent& event);
+		
 		void Mnunovo1004Click0(wxCommandEvent& event);
 		void Mnunovousurio1007Click(wxCommandEvent& event);
 		void Mnusalvar1005Click(wxCommandEvent& event);
+		void Mnusobre1009Click(wxCommandEvent& event);
 		
 	private:
 		//Do not add custom control declarations between
@@ -75,6 +78,7 @@ class Projeto1Frm : public wxFrame
 			ID_MNU_ACESSO_1006 = 1006,
 			ID_MNU_NOVOUSU_RIO_1007 = 1007,
 			ID_MNU_AJUDA_1008 = 1008,
+			ID_MNU_SOBRE_1009 = 1009,
 			
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values

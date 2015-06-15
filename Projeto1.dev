@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [Project]
 FileName=Projeto1.dev
 Name=Projeto1
@@ -284,12 +283,12 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
-
 =======
+
 [Project]
 FileName=Projeto1.dev
 Name=Projeto1
-UnitCount=18
+UnitCount=19
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -533,9 +532,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit18]
-FileName=md5.h
+FileName=Md5\md5.cpp
 CompileCpp=1
-Folder=
+Folder=Projeto1
 Compile=1
 Link=1
 Priority=1000
@@ -553,7 +552,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit19]
-FileName=Md5\md5.cpp
+FileName=Md5\md5.h
 CompileCpp=1
 Folder=Projeto1
 Compile=1
@@ -571,5 +570,5 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
-
 >>>>>>> origin/master
+

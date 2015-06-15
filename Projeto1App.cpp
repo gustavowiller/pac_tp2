@@ -23,11 +23,11 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 bool Projeto1FrmApp::OnInit()
 {   
-<<<<<<< HEAD
+
     wxLocale::AddCatalogLookupPathPrefix(_T("lang"));
     static wxLocale locale;
 	wxString language;
-=======
+
     
     //Faz a internacionalizaçã do programa - É utilizado a Classe wxLocale. 
     if (m_locale.Init(wxLANGUAGE_DEFAULT,
@@ -38,7 +38,7 @@ bool Projeto1FrmApp::OnInit()
         }
     } 
      
->>>>>>> origin/master
+
     
     
     //InserirUsuarios();
