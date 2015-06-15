@@ -27,3 +27,5 @@
 *.out
 *.app
 *.win
+Makefile.win
+test.db

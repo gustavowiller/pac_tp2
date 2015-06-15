@@ -61,9 +61,9 @@ void NewUser::CreateGUIControls()
 
 	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit3"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit2"));
 
-	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _("yyy"), wxPoint(17,27), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit1"));
+	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _("yyy"), wxPoint(17,27), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit1"));
 
 	WxStaticText3 = new wxStaticText(this, ID_WXSTATICTEXT3, _("Login"), wxPoint(17,55), wxDefaultSize, 0, _("WxStaticText3"));
 

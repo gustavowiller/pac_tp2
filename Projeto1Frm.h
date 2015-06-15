@@ -28,7 +28,6 @@
 ////Header Include Start
 #include <wx/filedlg.h>
 #include <wx/menu.h>
-
 ////Header Include End
 
 ////Dialog Style Start

@@ -23,6 +23,7 @@
 class Projeto1FrmApp : public wxApp
 {
 	public:
+        wxString m_language;
 		bool OnInit();
 		int OnExit();
 };

@@ -28,6 +28,7 @@
 BEGIN_EVENT_TABLE(Projeto1Frm,wxFrame)
 	////Manual Code Start
 	////Manual Code End
+	
 	EVT_CLOSE(Projeto1Frm::OnClose)
 	EVT_MENU(ID_MNU_NOVO_1004, Projeto1Frm::Mnunovo1004Click0)
 	EVT_MENU(ID_MNU_ABRIR_1002, Projeto1Frm::Mnuabrir1002Click)
@@ -74,6 +75,7 @@ void Projeto1Frm::CreateGUIControls()
 	SetMenuBar(WxMenuBar1);
 
 	SetTitle(_("Projeto1"));
+	SetIcon(wxNullIcon);
 	SetSize(8,8,820,513);
 	Center();
 	

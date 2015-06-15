@@ -60,7 +60,7 @@ void Login::CreateGUIControls()
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Entrar"), wxPoint(58, 103), wxSize(65, 22), 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 15), 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit2"));
 
 	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _(""), wxPoint(10, 26), wxSize(261, 18), 0, wxDefaultValidator, _("WxEdit1"));
 

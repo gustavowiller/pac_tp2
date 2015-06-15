@@ -180,7 +180,7 @@ object frmNewForm: TfrmNewForm
     Wx_HasHistory = False
   end
   object WxOpenFileDialog1: TWxOpenFileDialog
-    Left = 2
+    Left = 29
     Top = 119
     Width = 28
     Height = 27

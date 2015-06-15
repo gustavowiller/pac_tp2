@@ -25,9 +25,9 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 bool Projeto1FrmApp::OnInit()
 {   
-    long language =  wxLANGUAGE_GERMAN; 
-    wxLocale* locale = new wxLocale();
-     
+    wxLocale::AddCatalogLookupPathPrefix(_T("lang"));
+    static wxLocale locale;
+	wxString language;
     
     
     //InserirUsuarios();
