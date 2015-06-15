@@ -102,16 +102,16 @@ void Login::WxButton1Click(wxCommandEvent& event)
     wxString login = WxEdit1->GetValue();
 	wxString senha = WxEdit2->GetValue();
 	ComandosBD* con;
-    int resultado = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
-    if (resultado != 0){
+    int usuario_bd = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
+    if (usuario_bd != 0){
          //Testar Log
         Log* S_Log;
-        S_Log->Salva_Log(1,1);
+        S_Log->Salva_Log(usuario_bd,1);
         Destroy();
     }else{
         wxLogMessage("Usuario ou senha incorreto!"); 
         Log* S_Log;
-        S_Log->Salva_Log(1,2);
+        S_Log->Salva_Log(usuario_bd,2);
     }
 
 }

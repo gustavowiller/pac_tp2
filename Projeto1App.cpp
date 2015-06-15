@@ -10,8 +10,6 @@
 #include "Projeto1App.h"
 #include "Projeto1Frm.h"
 #include <wx/splash.h>
-///WxLocale
-#include <wx/intl.h>
 //#include "sqlite/ComandosBD.h"
 //#include "Help/help.h"
 #include "wx/help.h" 
@@ -25,9 +23,22 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 bool Projeto1FrmApp::OnInit()
 {   
+<<<<<<< HEAD
     wxLocale::AddCatalogLookupPathPrefix(_T("lang"));
     static wxLocale locale;
 	wxString language;
+=======
+    
+    //Faz a internacionalizaçã do programa - É utilizado a Classe wxLocale. 
+    if (m_locale.Init(wxLANGUAGE_DEFAULT,
+    wxLOCALE_LOAD_DEFAULT))
+    {
+        if(m_locale.AddCatalog(wxT("Projeto1"))){
+            wxLogMessage("Carregou");
+        }
+    } 
+     
+>>>>>>> origin/master
     
     
     //InserirUsuarios();
