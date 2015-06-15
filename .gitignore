@@ -27,9 +27,10 @@
 *.out
 *.app
 *.win
-Makefile.win
-test.db
+
+#Files DB, Project DB
+*.db
 *.win
 *.res
-Projeto1.dev
+*.dev
 *.layout
