@@ -29,3 +29,7 @@
 *.win
 Makefile.win
 test.db
+*.win
+*.res
+Projeto1.dev
+*.layout
