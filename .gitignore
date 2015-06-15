@@ -34,3 +34,5 @@
 *.res
 *.dev
 *.layout
+Objects/
+Output/
