@@ -32,8 +32,8 @@ bool Projeto1FrmApp::OnInit()
             wxLogMessage("Carregou");
         }
     } 
-     
     
+		
     
     //InserirUsuarios();
     wxFileSystem::AddHandler(new wxZipFSHandler);  
