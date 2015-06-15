@@ -22,12 +22,13 @@
 
 ///WxLocale
 #include <wx/intl.h>
-#define usuario_id;
+
 class Projeto1FrmApp : public wxApp
 {
     protected:
         wxLocale m_locale;    
 	public:
+        wxString m_language;
 		bool OnInit();
 		int OnExit();
 

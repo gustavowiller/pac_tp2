@@ -28,9 +28,9 @@
 *.app
 *.win
 
-Objects/
-*.layout
+#Files DB, Project DB
+*.db
+*.win
+*.res
 *.dev
-Makefile.win
-test.db
-
+*.layout

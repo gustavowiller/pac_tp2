@@ -6,5 +6,5 @@ class Log{
     wxString data;
     wxString hora;
 public:
-    void Salva_Log(int id_u, int ev);
+    void Salva_Log(int ev);
 };

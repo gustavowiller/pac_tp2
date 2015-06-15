@@ -1,11 +1,18 @@
 #include "Log.h"
 #include "../sqlite/ComandosBD.h"
 #include <wx/datetime.h>
-void Log::Salva_Log(int id_u, int ev){
+void Log::Salva_Log(int ev){
     //**** Pega a data Atual *********
     wxDateTime now = wxDateTime::Now();
     wxString data_hora = now.Format();
     //wxLogMessage(data_hora);
+    
+
+        
+    //Pega o usuario que esta logado no sistema
+    int id_u;
+    FILE *arq = fopen("sessao.dat", "rb");
+    fread (&id_u, sizeof(int), 1, arq);
     
     //Converte Inteiro para Sttring
     wxString id_usuario;

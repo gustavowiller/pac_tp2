@@ -60,7 +60,7 @@ void Login::CreateGUIControls()
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Entrar"), wxPoint(58, 103), wxSize(65, 22), 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 15), 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit2"));
 
 	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _(""), wxPoint(10, 26), wxSize(261, 18), 0, wxDefaultValidator, _("WxEdit1"));
 
@@ -87,7 +87,7 @@ void Login::OnClose(wxCloseEvent& event)
 void Login::WxButton2Click(wxCommandEvent& event)
 {
 	Log* S_Log;
-    S_Log->Salva_Log(1,8);
+    S_Log->Salva_Log(8);
     Destroy();
     exit(0);
 	
@@ -102,16 +102,23 @@ void Login::WxButton1Click(wxCommandEvent& event)
     wxString login = WxEdit1->GetValue();
 	wxString senha = WxEdit2->GetValue();
 	ComandosBD* con;
-    usuario_id = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
+    int usuario_id = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
     if (usuario_id != 0){
-         //Testar Log
+        //Salvar sessão usuario
+        FILE *arq = fopen("sessao.dat","wb");
+        fwrite(&usuario_id,sizeof(int),1,arq); 
+        fclose(arq);
+        
+        //Salvar Log
         Log* S_Log;
-        S_Log->Salva_Log(usuario_id,1);
+        S_Log->Salva_Log(1);
         Destroy();
+        
+        
     }else{
         wxLogMessage("Usuario ou senha incorreto!"); 
         Log* S_Log;
-        S_Log->Salva_Log(usuario_id,2);
+        S_Log->Salva_Log(2);
     }
 
 }

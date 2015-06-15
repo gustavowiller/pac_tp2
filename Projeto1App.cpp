@@ -23,18 +23,19 @@ IMPLEMENT_APP(Projeto1FrmApp)
 
 bool Projeto1FrmApp::OnInit()
 {   
+
+    wxLocale::AddCatalogLookupPathPrefix(_T("lang"));
+    static wxLocale locale;
+	wxString language;
+
     
     //Faz a internacionalizaçã do programa - É utilizado a Classe wxLocale. 
     if (m_locale.Init(wxLANGUAGE_DEFAULT,
     wxLOCALE_LOAD_DEFAULT))
     {
-        if(m_locale.AddCatalog(wxT("Projeto1"))){
-            wxLogMessage("Carregou");
-        }
-    } 
-    
-		
-    
+        m_locale.AddCatalog(wxT("Projeto1"));
+    }
+
     //InserirUsuarios();
     wxFileSystem::AddHandler(new wxZipFSHandler);  
     //m_helpController = new wxHelpController; 
