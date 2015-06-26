@@ -22,16 +22,19 @@
 
 ///WxLocale
 #include <wx/intl.h>
+
+
+
 class Projeto1FrmApp : public wxApp
 {
-    protected:
-        wxLocale m_locale;    
 	public:
-        wxLocale *objLocale;
         wxString m_language;
 		bool OnInit();
 		int OnExit();
-
+		
+    protected:
+        wxLocale m_locale;
 };
+
 
 #endif

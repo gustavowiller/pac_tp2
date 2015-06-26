@@ -104,17 +104,15 @@ void Login::WxButton1Click(wxCommandEvent& event)
 	ComandosBD* con;
     int usuario_id = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
     if (usuario_id != 0){
-        //Salvar sessão usuario
+         //Salvar sessão usuario
         FILE *arq = fopen("sessao.dat","wb");
         fwrite(&usuario_id,sizeof(int),1,arq); 
         fclose(arq);
-        
-        //Salvar Log
+
+         //Testar Log
         Log* S_Log;
         S_Log->Salva_Log(1);
         Destroy();
-        
-        
     }else{
         wxLogMessage("Usuario ou senha incorreto!"); 
         Log* S_Log;

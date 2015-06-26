@@ -1,0 +1,1 @@
+A classe Splash é responsável pela tela de Splash do sistema, ela é usada no início do aplicativo para que enquando a aplicação carrega outros módulos (como se conectar ao banco de dados).

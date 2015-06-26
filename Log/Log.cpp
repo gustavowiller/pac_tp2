@@ -6,13 +6,11 @@ void Log::Salva_Log(int ev){
     wxDateTime now = wxDateTime::Now();
     wxString data_hora = now.Format();
     //wxLogMessage(data_hora);
-    
-
-        
     //Pega o usuario que esta logado no sistema
     int id_u;
     FILE *arq = fopen("sessao.dat", "rb");
     fread (&id_u, sizeof(int), 1, arq);
+    
     
     //Converte Inteiro para Sttring
     wxString id_usuario;

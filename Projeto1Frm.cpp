@@ -119,6 +119,7 @@ void Projeto1Frm::Mnufechar1003Click(wxCommandEvent& event)
 	Log* S_Log;
     S_Log->Salva_Log(4);
 	Destroy();
+	exit(0);
 }
 
 
@@ -178,7 +179,7 @@ void Projeto1Frm::Mnusobre1009Click(wxCommandEvent& event)
     wxDialog dlg(this, wxID_ANY, wxString(_("Sobre o Aplicativo TP 2")));  
 	 
 	topsizer = new wxBoxSizer(wxVERTICAL); 
-	html = new wxHtmlWindow(&dlg, wxID_ANY, wxDefaultPosition, wxSize(380, 160), wxHW_SCROLLBAR_NEVER); 
+	html = new wxHtmlWindow(&dlg, wxID_ANY, wxDefaultPosition, wxSize(500, 400)); 
 	
 	html->SetBorders(0);  
 	html->LoadPage(wxT("ajuda.html")); 
@@ -197,5 +198,7 @@ void Projeto1Frm::Mnusobre1009Click(wxCommandEvent& event)
 	topsizer->Fit(&dlg);  
 	 
 	dlg.ShowModal();
+	Log* S_Log;
+    S_Log->Salva_Log(10);
 	
 }

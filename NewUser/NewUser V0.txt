@@ -1,0 +1,1 @@
+A classe NewUser é responsável por adicionar um usuário ao sistema. Ela faz uso das classe ComandosBD para salvar o novo usuário no banco de dados e da classe MD5 para criptografar a senha digitada. Nesta classe há um frame em que as informações de nome, usuario e senha poderão ser digitados.

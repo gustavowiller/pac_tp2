@@ -16,29 +16,31 @@
 #include "wx/fs_zip.h"
 #include "Login/LoginFrm.h"
 #include "Log/Log.h"
+#include <wx/translation.h>
 
 IMPLEMENT_APP(Projeto1FrmApp)
-#include <wx/intl.h>
 
+static int id_usuario_sistema = 0;
 bool Projeto1FrmApp::OnInit()
 {   
 
-    wxLocale::AddCatalogLookupPathPrefix(wxT("./Lang"));
-    wxLocale::AddCatalogLookupPathPrefix(wxT("../../Lang"));
-    //static wxLocale locale;
-	//wxString language;
+    wxLocale::AddCatalogLookupPathPrefix(_T("lang"));
+    static wxLocale locale;
+	wxString language;
 
-    objLocale = new wxLocale;
     
-    //Faz a internacionalizaçã do programa - É utilizado a Classe wxLocale.
+    //Faz a internacionalizaçã do programa - É utilizado a Classe wxLocale. 
     if (m_locale.Init(wxLANGUAGE_DEFAULT,
     wxLOCALE_LOAD_DEFAULT))
     {
-        objLocale->AddCatalogLookupPathPrefix(wxT("./Lang"));
-        objLocale->AddCatalogLookupPathPrefix(wxT("../../Lang"));
-        objLocale->AddCatalog(wxT("myapp"));
-    }
+        if(m_locale.AddCatalog(wxT("Projeto1"))){
+            wxLogMessage("Carregou");
+        }
+    } 
+     
 
+    
+    
     //InserirUsuarios();
     wxFileSystem::AddHandler(new wxZipFSHandler);  
     //m_helpController = new wxHelpController; 

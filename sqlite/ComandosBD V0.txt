@@ -1,0 +1,1 @@
+A classe ComandosBD utiliza da classe wxSqLite3 para que as funções e a comunicação do banco de dados funcione. Nesta classe há duas funções que utilizamos com frequencia, A função  IsertSql e a SelectSql, ambas para tratar comando sql personalizados na aplicação.

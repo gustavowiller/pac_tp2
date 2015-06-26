@@ -1,0 +1,2 @@
+A classe GetHelp chama o arquivo HTML criado para ser apresentado ao usuário dentro de um
+Dialog com um Scroll para poder se mover a página.

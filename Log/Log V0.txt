@@ -1,0 +1,1 @@
+A classe SalvaLog é responsável por salvar os logs  do sistema. Estes são todas as funcões que o programa proporciona para o usuário. Esta classe chama um arquivo .dat responsavel por salvar o id do usuário logado chamando também a classe ComandosBD para que o log seja salvo no banco de dados através da função InsertSql.

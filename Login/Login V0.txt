@@ -1,0 +1,1 @@
+A classe login é responsável por realizar a entrada do usuário no sistema. Ela chama a classe MD5 que irá tratar a senha digitada, a classe Log para salvar o log de entrada ou saída do sistema e a classe ComandosBD para realizar a autênticação do usuário consultando a base de dados.

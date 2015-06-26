@@ -59,15 +59,15 @@ void NewUser::CreateGUIControls()
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Cadastrar"), wxPoint(113,151), wxDefaultSize, 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxDefaultSize, 0, wxDefaultValidator, _("WxEdit3"));
+	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit3"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit2"));
 
-	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _("yyy"), wxPoint(17,27), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit1"));
+	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _(""), wxPoint(17,27), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit1"));
 
-	WxStaticText3 = new wxStaticText(this, ID_WXSTATICTEXT3, _("Login"), wxPoint(17,55), wxDefaultSize, 0, _("WxStaticText3"));
+	WxStaticText3 = new wxStaticText(this, ID_WXSTATICTEXT3, _("Login"), wxPoint(17,54), wxDefaultSize, 0, _("WxStaticText3"));
 
-	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("Senha"), wxPoint(17,95), wxDefaultSize, 0, _("WxStaticText2"));
+	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("Senha"), wxPoint(17,94), wxDefaultSize, 0, _("WxStaticText2"));
 
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("Nome de usuário"), wxPoint(17,12), wxDefaultSize, 0, _("WxStaticText1"));
 
@@ -105,7 +105,8 @@ void NewUser::WxEdit2Updated(wxCommandEvent& event)
  */
 void NewUser::WxButton1Click(wxCommandEvent& event)
 {
-	// insert your code here
+	int usuario_id;
+    // insert your code here
 	wxString nome = WxEdit1->GetValue();
 	wxString login = WxEdit2->GetValue();
 	wxString senha = WxEdit3->GetValue();
