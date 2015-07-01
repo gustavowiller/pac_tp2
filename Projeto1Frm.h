@@ -58,6 +58,8 @@ class Projeto1Frm : public wxFrame
 		void Mnunovousurio1007Click(wxCommandEvent& event);
 		void Mnusalvar1005Click(wxCommandEvent& event);
 		void Mnusobre1009Click(wxCommandEvent& event);
+		void MnuLogout1010Click(wxCommandEvent& event);
+
 		int is_admin;
         int usuario_id;
 	private:
@@ -157,7 +159,7 @@ class Projeto1Frm : public wxFrame
 			ID_MNU_NOVOUSU_RIO_1007 = 1007,
 			ID_MNU_AJUDA_1008 = 1008,
 			ID_MNU_SOBRE_1009 = 1009,
-
+            ID_MNU_LOGOUT_1010 = 1010,
 
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values

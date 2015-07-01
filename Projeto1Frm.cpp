@@ -96,6 +96,8 @@ BEGIN_EVENT_TABLE(Projeto1Frm,wxFrame)
 	EVT_MENU(ID_MNU_FECHAR_1003, Projeto1Frm::Mnufechar1003Click)
 	EVT_MENU(ID_MNU_NOVOUSU_RIO_1007, Projeto1Frm::Mnunovousurio1007Click)
 	EVT_MENU(ID_MNU_SOBRE_1009, Projeto1Frm::Mnusobre1009Click)
+	EVT_MENU(ID_MNU_SOBRE_1009, Projeto1Frm::Mnusobre1009Click)
+	EVT_MENU(ID_MNU_LOGOUT_1010, Projeto1Frm::MnuLogout1010Click)
 END_EVENT_TABLE()
 ////Event Table End
 
@@ -148,7 +150,9 @@ void Projeto1Frm::CreateGUIControls()
 	//Controle de acesso - Somente Adminstradores visualizam o menu para acessar cadastro de usuarios.
     if(this->is_admin==1)
         ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_NOVOUSU_RIO_1007, _("Novo Usuário"), _(""), wxITEM_NORMAL);
+    ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_LOGOUT_1010,_("Logout"),_(""),wxITEM_NORMAL);
 	WxMenuBar1->Append(ID_MNU_ACESSO_1006_Mnu_Obj, _("Acesso"));
+
 
 	wxMenu *ID_MNU_AJUDA_1008_Mnu_Obj = new wxMenu();
 	ID_MNU_AJUDA_1008_Mnu_Obj->Append(ID_MNU_SOBRE_1009, _("Sobre"), _(""), wxITEM_NORMAL);
@@ -412,6 +416,16 @@ void Projeto1Frm::Mnusobre1009Click(wxCommandEvent& event)
 	Log* S_Log;
     S_Log->Salva_Log(10);
 }
+
+void Projeto1Frm::MnuLogout1010Click(wxCommandEvent& event)
+{
+    Destroy();
+    wxIcon icon3(wxT("images.ico"), wxBITMAP_TYPE_ICO, 16, 16);
+	Login* frame = new Login(NULL);
+    frame->SetIcon(icon3);
+    frame->Show();
+}
+
 void Projeto1Frm::OnAtualizarClick(wxCommandEvent& event)
 {
     SetValoresTanques();
@@ -472,59 +486,76 @@ void Projeto1Frm::OnBitmapButtonV1inClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Hide();
     StaticBoxTanque1->Disable();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,0);
 }
 void Projeto1Frm::OnBitmapButtonV1ouClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Show();
     StaticBoxTanque1->Enable();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,1);
 }
 
 void Projeto1Frm::OnBitmapButtonV2inClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Hide();
     StaticBoxTanque2->Disable();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(2,0);
 }
 void Projeto1Frm::OnBitmapButtonV2ouClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Show();
     StaticBoxTanque2->Enable();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(2,1);
 }
 
 
 void Projeto1Frm::OnBitmapButtonV3inClick(wxCommandEvent& event)
 {
-    BitmapButtonV3ou->Show();
+    BitmapButtonV3in->Hide();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(3,0);
 }
 void Projeto1Frm::OnBitmapButtonV3ouClick(wxCommandEvent& event)
 {
     BitmapButtonV3ou->Hide();
     BitmapButtonV3in->Show();
-    EsvaziaTanque(1);
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(3,1);
 }
 
 void Projeto1Frm::OnBitmapButtonV4inClick(wxCommandEvent& event)
 {
-    BitmapButtonV4ou->Show();
+
+    BitmapButtonV4in->Hide();
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(4,0);
+
 }
 void Projeto1Frm::OnBitmapButtonV4ouClick(wxCommandEvent& event)
 {
     BitmapButtonV4ou->Hide();
     BitmapButtonV4in->Show();
-    EsvaziaTanque(2);
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(4,1);
 }
 void Projeto1Frm::OnBitmapButtonV5inClick(wxCommandEvent& event)
 {
     BitmapButtonV5ou->Show();
 
 
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(5,0);
 }
 void Projeto1Frm::OnBitmapButtonV5ouClick(wxCommandEvent& event)
 {
     BitmapButtonV5ou->Hide();
     BitmapButtonV5in->Show();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(5,1);
 }
 
 void Projeto1Frm::SetGauge(int T1, int T2, int T3)
