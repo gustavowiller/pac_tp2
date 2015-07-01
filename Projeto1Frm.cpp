@@ -280,16 +280,7 @@ void Projeto1Frm::CreateGUIControls()
 	//******************
 
 	//Buscar ID
-    int id_u;
-    FILE *arq = fopen("sessao.dat", "rb");
-    fread (&id_u, sizeof(int), 1, arq);
-    //Converte Inteiro para Sttring
-    wxString id_usuario;
-    id_usuario << id_u;
-    //Buscar Nome de Usuário
-    ComandosBD* con;
-    wxString nome = con->SelectSql("select nome from usuarios where usuarios.id ="+id_usuario+";");
-    //************************
+
 
 
 	SetTitle(_("Supervisório - Versão 1 - TP3 - PAC"));
@@ -443,6 +434,7 @@ void Projeto1Frm::SetValoresTanques()
     ValTanque1Atual = ValTanque1Atual+ValTanque1;
     ValTanque2Atual = ValTanque2Atual+ValTanque2;
 
+
     SetGauge(ValTanque1Atual, ValTanque2Atual, ValTanque3Atual);
     ZeraPainel();
 }
@@ -515,7 +507,9 @@ void Projeto1Frm::OnBitmapButtonV2ouClick(wxCommandEvent& event)
 
 void Projeto1Frm::OnBitmapButtonV3inClick(wxCommandEvent& event)
 {
+    BitmapButtonV3ou->Show();
     BitmapButtonV3in->Hide();
+    EsvaziaTanque(1);
     Log* S_Log;
     S_Log->Salva_Log_Valvula(3,0);
 }
@@ -523,13 +517,14 @@ void Projeto1Frm::OnBitmapButtonV3ouClick(wxCommandEvent& event)
 {
     BitmapButtonV3ou->Hide();
     BitmapButtonV3in->Show();
+    EsvaziaTanque(1);
     Log* S_Log;
     S_Log->Salva_Log_Valvula(3,1);
 }
 
 void Projeto1Frm::OnBitmapButtonV4inClick(wxCommandEvent& event)
 {
-
+    BitmapButtonV4ou->Show();
     BitmapButtonV4in->Hide();
     Log* S_Log;
     S_Log->Salva_Log_Valvula(4,0);
@@ -539,14 +534,13 @@ void Projeto1Frm::OnBitmapButtonV4ouClick(wxCommandEvent& event)
 {
     BitmapButtonV4ou->Hide();
     BitmapButtonV4in->Show();
+    EsvaziaTanque(2);
     Log* S_Log;
     S_Log->Salva_Log_Valvula(4,1);
 }
 void Projeto1Frm::OnBitmapButtonV5inClick(wxCommandEvent& event)
 {
     BitmapButtonV5ou->Show();
-
-
     Log* S_Log;
     S_Log->Salva_Log_Valvula(5,0);
 }
