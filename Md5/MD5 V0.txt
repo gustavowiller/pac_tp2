@@ -1,0 +1,1 @@
+A classe MD5 é responsável pela criptografia da senha do usuário antes de salva ou consulta-la no banco de dados.

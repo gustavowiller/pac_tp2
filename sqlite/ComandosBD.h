@@ -1,11 +1,11 @@
 #ifndef H_COMANDOBD
 #define H_COMANDOBD
 
-#include <wx/wxsqlite3.h>
-#include <wx/stdpaths.h>
+#include "wxsqlite3.h"
+//#include <stdpaths.h>
 
 class ComandosBD{
-    
+
 public:
     void InserirUsuarios();
     int InsertSql(wxString sql);

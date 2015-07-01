@@ -13,7 +13,7 @@
 #include "../sqlite/ComandosBD.h"
 #include "../Md5/md5.h"
 
-//#include "../sqlite/ComandosBD.h"
+
 
 
 //Do not add custom headers between
@@ -31,7 +31,7 @@
 BEGIN_EVENT_TABLE(Login,wxFrame)
 	////Manual Code Start
 	////Manual Code End
-	
+
 	EVT_CLOSE(Login::OnClose)
 	EVT_BUTTON(ID_WXBUTTON2,Login::WxButton2Click)
 	EVT_BUTTON(ID_WXBUTTON1,Login::WxButton1Click)
@@ -42,6 +42,7 @@ Login::Login(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoi
 : wxFrame(parent, id, title, wxDefaultPosition, size, style)
 {
 	CreateGUIControls();
+
 }
 
 Login::~Login()
@@ -56,22 +57,23 @@ void Login::CreateGUIControls()
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
 
-	WxButton2 = new wxButton(this, ID_WXBUTTON2, _("Sair"), wxPoint(159, 103), wxSize(65, 22), 0, wxDefaultValidator, _("WxButton2"));
+	WxButton2 = new wxButton(this, ID_WXBUTTON2, wxT("Sair"), wxPoint(159, 103), wxSize(65, 22), 0, wxDefaultValidator, _("WxButton2"));
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Entrar"), wxPoint(58, 103), wxSize(65, 22), 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 18), 0, wxDefaultValidator, _("WxEdit2"));
+	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(13, 74), wxSize(260, 20), wxTE_PASSWORD);
 
-	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _(""), wxPoint(10, 26), wxSize(261, 18), 0, wxDefaultValidator, _("WxEdit1"));
+	WxEdit1 = new wxTextCtrl(this, ID_WXEDIT1, _(""), wxPoint(10, 26), wxSize(261, 20), 0, wxDefaultValidator, _("WxEdit1"));
 
 	WxStaticText2 = new wxStaticText(this, ID_WXSTATICTEXT2, _("Senha"), wxPoint(13, 58), wxDefaultSize, 0, _("WxStaticText2"));
 
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("Usuário"), wxPoint(11, 8), wxDefaultSize, 0, _("WxStaticText1"));
 
+
 	SetTitle(_("Login"));
 	SetSize(8,8,291,173);
 	Center();
-	
+
 	////GUI Items Creation End
 }
 
@@ -90,7 +92,7 @@ void Login::WxButton2Click(wxCommandEvent& event)
     S_Log->Salva_Log(8);
     Destroy();
     exit(0);
-	
+
 }
 
 /*
@@ -98,6 +100,8 @@ void Login::WxButton2Click(wxCommandEvent& event)
  */
 void Login::WxButton1Click(wxCommandEvent& event)
 {
+    Projeto1Frm* frame = new Projeto1Frm(NULL);
+    wxIcon icon3(wxT("images.ico"), wxBITMAP_TYPE_ICO, 16, 16);
 	// insert your code here
     wxString login = WxEdit1->GetValue();
 	wxString senha = WxEdit2->GetValue();
@@ -106,15 +110,19 @@ void Login::WxButton1Click(wxCommandEvent& event)
     if (usuario_id != 0){
          //Salvar sessão usuario
         FILE *arq = fopen("sessao.dat","wb");
-        fwrite(&usuario_id,sizeof(int),1,arq); 
+        fwrite(&usuario_id,sizeof(int),1,arq);
         fclose(arq);
 
          //Testar Log
         Log* S_Log;
         S_Log->Salva_Log(1);
+
+        frame->SetIcon(icon3);
+        frame->Maximize(TRUE);
+        frame->Show();
         Destroy();
     }else{
-        wxLogMessage("Usuario ou senha incorreto!"); 
+        wxLogMessage("Usuario ou senha incorreto!");
         Log* S_Log;
         S_Log->Salva_Log(2);
     }

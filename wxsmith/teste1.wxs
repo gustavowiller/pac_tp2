@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="teste1">
+		<id_arg>0</id_arg>
+		<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+			<pos>224,160</pos>
+			<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="BitmapButton1" member="yes">
+				<bitmap>C:\Users\LuisPaulo\Documents\code\prj\ImagePanel\red_button.png</bitmap>
+				<pos>40,88</pos>
+				<size>40,40</size>
+				<handler function="OnBitmapButton1Click" entry="EVT_BUTTON" />
+			</object>
+			<object class="wxGauge" name="ID_GAUGE1" variable="Gauge1" member="yes">
+				<value>50</value>
+				<pos>136,40</pos>
+				<size>28,176</size>
+				<fg>wxSYS_COLOUR_BTNTEXT</fg>
+				<bg>wxSYS_COLOUR_HIGHLIGHT</bg>
+				<font>
+					<size>10</size>
+					<style>normal</style>
+					<weight>bold</weight>
+					<underlined>0</underlined>
+					<family>swiss</family>
+					<face>@Yu Gothic UI</face>
+				</font>
+				<tooltip>Teste</tooltip>
+				<help>Valor do liquido contido no tanque 1</help>
+				<style>wxGA_VERTICAL</style>
+			</object>
+		</object>
+	</object>
+</wxsmith>
