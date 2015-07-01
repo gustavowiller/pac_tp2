@@ -90,6 +90,8 @@ BEGIN_EVENT_TABLE(Projeto1Frm,wxFrame)
 	EVT_MENU(ID_MNU_FECHAR_1003, Projeto1Frm::Mnufechar1003Click)
 	EVT_MENU(ID_MNU_NOVOUSU_RIO_1007, Projeto1Frm::Mnunovousurio1007Click)
 	EVT_MENU(ID_MNU_SOBRE_1009, Projeto1Frm::Mnusobre1009Click)
+	EVT_MENU(ID_MNU_SOBRE_1009, Projeto1Frm::Mnusobre1009Click)
+	EVT_MENU(ID_MNU_LOGOUT_1010, Projeto1Frm::MnuLogout1010Click)
 END_EVENT_TABLE()
 ////Event Table End
 
@@ -143,7 +145,9 @@ void Projeto1Frm::CreateGUIControls()
 	//Controle de acesso - Somente Adminstradores visualizam o menu para acessar cadastro de usuarios.
     if(this->is_admin==1)
         ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_NOVOUSU_RIO_1007, _("Novo Usuário"), _(""), wxITEM_NORMAL);
+    ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_LOGOUT_1010,_("Logout"),_(""),wxITEM_NORMAL);
 	WxMenuBar1->Append(ID_MNU_ACESSO_1006_Mnu_Obj, _("Acesso"));
+
 
 	wxMenu *ID_MNU_AJUDA_1008_Mnu_Obj = new wxMenu();
 	ID_MNU_AJUDA_1008_Mnu_Obj->Append(ID_MNU_SOBRE_1009, _("Sobre"), _(""), wxITEM_NORMAL);
@@ -384,6 +388,16 @@ void Projeto1Frm::Mnusobre1009Click(wxCommandEvent& event)
 	Log* S_Log;
     S_Log->Salva_Log(10);
 }
+
+void Projeto1Frm::MnuLogout1010Click(wxCommandEvent& event)
+{
+    Destroy();
+    wxIcon icon3(wxT("images.ico"), wxBITMAP_TYPE_ICO, 16, 16);
+	Login* frame = new Login(NULL);
+    frame->SetIcon(icon3);
+    frame->Show();
+}
+
 void Projeto1Frm::OnAtualizarClick(wxCommandEvent& event)
 {
     SetValoresTanques();
