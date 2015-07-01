@@ -3620,7 +3620,7 @@
 1435685134 c:\users\luispaulo\documents\code\prj\lcdwindow.cpp
 	"wx/lcdwindow.h"
 
-1435724546 D
+1435724521 D
 
 1434331400 source:c:\users\gustavo\documents\github\pac_tp2\help\help.cpp
 	"Help.h"
@@ -3641,7 +3641,7 @@
 	"../sqlite/ComandosBD.h"
 	<wx/datetime.h>
 
-1435778259 c:\users\gustavo\documents\github\pac_tp2\log\log.h
+1435783138 c:\users\gustavo\documents\github\pac_tp2\log\log.h
 	<wx/wx.h>
 
 1435426206 c:\users\gustavo\documents\github\pac_tp2\sqlite\comandosbd.h
@@ -3671,7 +3671,7 @@
 	<wx/stattext.h>
 	"../Projeto1Frm.h"
 
-1435776384 c:\users\gustavo\documents\github\pac_tp2\projeto1frm.h
+1435783140 c:\users\gustavo\documents\github\pac_tp2\projeto1frm.h
 	<wx/wx.h>
 	<wx/frame.h>
 	<wx/wxprec.h>
@@ -3796,11 +3796,10 @@
 	<wx/statbmp.h>
 	<wx/frame.h>
 
-<<<<<<< HEAD
 1435724521 c:\users\gustavo\documents\github\pac_tp2\zoom.h
 
 1435724521 c:\users\luispaulo\documents\code\prj\zoom.h
-=======
+
 1434331400 source:c:\users\luispaulo\documents\github\pac_tp2\help\help.cpp
 	"Help.h"
 
@@ -3971,5 +3970,4 @@
 	<wx/panel.h>
 	<wx/statbmp.h>
 	<wx/frame.h>
->>>>>>> origin/master
 
