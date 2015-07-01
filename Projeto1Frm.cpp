@@ -250,6 +250,25 @@ void Projeto1Frm::CreateGUIControls()
     BitmapButtonV5ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV5OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
     BitmapButtonV5in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV5IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
 
+    //Resgatar ID
+    int id_u;
+    FILE *arq = fopen("sessao.dat", "rb");
+    fread (&id_u, sizeof(int), 1, arq);
+    //Converte Inteiro para Sttring
+    wxString id_usuario;
+    id_usuario << id_u;
+    //wxLogMessage(id_usuario);
+    //****************************
+    ComandosBD* con;
+    wxString resultado = con->SelectSqlUser("select nome from usuarios where usuarios.id = "+id_usuario+";");
+
+
+    //if (resultado == 0){
+     //   wxLogMessage("Erro ao salvar Log Valvula");
+    //}
+
+
+
     Refresh();
 
     //*****Gauges****
@@ -277,11 +296,10 @@ void Projeto1Frm::CreateGUIControls()
 	StatusBar->SetStatusStyles(3,__wxStatusBarStyles_1);
 	SetStatusBar(StatusBar);
     StatusBar->PushStatusText("PRONTO",0);
+    StatusBar->PushStatusText("Olá "+resultado,1);
 	//******************
 
 	//Buscar ID
-
-
 
 	SetTitle(_("Supervisório - Versão 1 - TP3 - PAC"));
 	SetIcon(wxNullIcon);

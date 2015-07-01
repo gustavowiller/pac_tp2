@@ -59,7 +59,7 @@ void NewUser::CreateGUIControls()
 
 	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Cadastrar"), wxPoint(113,171), wxDefaultSize, 0, wxDefaultValidator, _("WxButton1"));
 
-	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit3"));
+	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxSize(260, 20),wxTE_PASSWORD);
 
 	WxEdit2 = new wxTextCtrl(this, ID_WXEDIT2, _(""), wxPoint(17,70), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit2"));
 

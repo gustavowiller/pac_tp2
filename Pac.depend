@@ -3813,7 +3813,7 @@
 1433429768 c:\users\luispaulo\documents\github\pac_tp2\icon\icon.h
 	<wx/wx.h>
 
-1435786687 source:c:\users\luispaulo\documents\github\pac_tp2\log\log.cpp
+1435793261 source:c:\users\luispaulo\documents\github\pac_tp2\log\log.cpp
 	"Log.h"
 	"../sqlite/ComandosBD.h"
 	<wx/datetime.h>
@@ -3902,7 +3902,7 @@
 	<wx/wx.h>
 	<wx/wx.h>
 
-1435791059 source:c:\users\luispaulo\documents\github\pac_tp2\projeto1frm.cpp
+1435794061 source:c:\users\luispaulo\documents\github\pac_tp2\projeto1frm.cpp
 	<wx/wx.h>
 	"wx/html/htmlwin.h"
 	<wx/statline.h>
@@ -3916,7 +3916,7 @@
 
 1431819694 source:c:\users\luispaulo\documents\github\pac_tp2\splash\splash.cpp
 
-1435786686 source:c:\users\luispaulo\documents\github\pac_tp2\sqlite\comandosbd.cpp
+1435793506 source:c:\users\luispaulo\documents\github\pac_tp2\sqlite\comandosbd.cpp
 	"ComandosBD.h"
 
 1435786686 source:c:\users\luispaulo\documents\github\pac_tp2\teste1.cpp
