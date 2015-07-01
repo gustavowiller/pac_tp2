@@ -98,6 +98,7 @@ Projeto1Frm::Projeto1Frm(wxWindow *parent, int is_admin, wxWindowID id, const wx
 {
     this->is_admin = is_admin;
 	CreateGUIControls();
+
 }
 
 Projeto1Frm::~Projeto1Frm()
@@ -206,23 +207,6 @@ void Projeto1Frm::CreateGUIControls()
 	StaticTextValTanque3->SetFont(StaticText3Font);
 
 
-    //**** Sobre as valvulas
-    BitmapButtonV1in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV1IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(73,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
-    BitmapButtonV1ou = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV1OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(73,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
-    BitmapButtonV2in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV2IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(881,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
-    BitmapButtonV2ou = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV2OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(881,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
-    BitmapButtonV3in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV3IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(293,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
-    BitmapButtonV3ou = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV3OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(293,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
-    BitmapButtonV4in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV4IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(616,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
-    BitmapButtonV4ou = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV4OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(616,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
-    BitmapButtonV5ou = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV5OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
-    BitmapButtonV5in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV5IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
-
-
-
-
-
-
     Connect(ID_BITMAPBUTTONV1IN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&Projeto1Frm::OnBitmapButtonV1inClick);
     Connect(ID_BITMAPBUTTONV1OU,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&Projeto1Frm::OnBitmapButtonV1ouClick);
 
@@ -245,6 +229,21 @@ void Projeto1Frm::CreateGUIControls()
     wxImage::AddHandler( new wxPNGHandler );
 	m_bgImage = new wxStaticBitmap( Panel1, wxID_ANY, wxBitmap( img8, wxBITMAP_TYPE_PNG ), wxDefaultPosition, wxDefaultSize, 0 );
 
+    //**** Sobre as valvulas
+    BitmapButtonV1in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV1IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(73,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
+    BitmapButtonV1ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV1OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(73,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
+    BitmapButtonV2in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV2IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(881,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
+    BitmapButtonV2ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV2OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(881,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
+    BitmapButtonV3ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV3OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(293,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
+    BitmapButtonV3in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV3IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(293,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
+    BitmapButtonV4ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV4OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(616,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
+    BitmapButtonV4in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV4IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(616,418), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
+    BitmapButtonV5ou = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV5OU, wxBitmap(wxImage(_T("ImagePanel\\v2.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1OU"));
+    BitmapButtonV5in = new wxBitmapButton(m_bgImage, ID_BITMAPBUTTONV5IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(587,609), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
+
+    Refresh();
+
+    //*****Gauges****
     GaugeT1 = new wxGauge(m_bgImage, ID_GAUGET1, 100, wxPoint(420,140), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET1"));
     GaugeT1->SetValue(0);
     GaugeT1->SetToolTip(_("Valor do liquido contido no tanque 1"));
@@ -255,7 +254,7 @@ void Projeto1Frm::CreateGUIControls()
     GaugeT2->SetToolTip(_("Valor do liquido contido no tanque 2"));
 	GaugeT2->SetHelpText(_("Valor do liquido contido no tanque 2"));
 	GaugeT2->SetForegroundColour(wxColour(27,16,150));
-    GaugeT3 = new wxGauge(m_bgImage, ID_GAUGET3, 100, wxPoint(307,469), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET3"));
+    GaugeT3 = new wxGauge(m_bgImage, ID_GAUGET3, 200, wxPoint(250,420), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET3"));
     GaugeT3->SetValue(0);
     GaugeT3->SetToolTip(_("Valor do liquido contido no tanque 3"));
 	GaugeT3->SetHelpText(_("Valor do liquido contido no tanque 3"));
@@ -397,24 +396,13 @@ void Projeto1Frm::OnAtualizarClick(wxCommandEvent& event)
 }
 void Projeto1Frm::SetValoresTanques()
 {
-    ValTanque1 = SpinCtrlTanque1->GetValue();
-    ValTanque2 = SpinCtrlTanque2->GetValue();
+    //ValTanque1 = SpinCtrlTanque1->GetValue();
+    //ValTanque2 = SpinCtrlTanque2->GetValue();
     ValTanque1Atual = ValTanque1Atual+ValTanque1;
     ValTanque2Atual = ValTanque2Atual+ValTanque2;
 
-    SetGauge(ValTanque1Atual, ValTanque2Atual, 0);
+    SetGauge(ValTanque1Atual, ValTanque2Atual, ValTanque3Atual);
     ZeraPainel();
-    /*
-    wxImage::AddHandler( new wxPNGHandler );
-    if((ValTanque1Atual < 250)){
-
-        m_bgImage = new wxStaticBitmap( Panel1, wxID_ANY, wxBitmap( img1, wxBITMAP_TYPE_PNG ), wxDefaultPosition, wxDefaultSize, 0 );
-    }
-    if((ValTanque1Atual >= 250)){
-
-        m_bgImage = new wxStaticBitmap( Panel1, wxID_ANY, wxBitmap( img4, wxBITMAP_TYPE_PNG ), wxDefaultPosition, wxDefaultSize, 0 );
-    }
-    */
 }
 
 void Projeto1Frm::SetValores(int val, int tanque)
@@ -426,6 +414,11 @@ void Projeto1Frm::SetValores(int val, int tanque)
     if(tanque == 2){
         StaticTextValTanque2->SetLabel(mystring);
     }
+    if(tanque == 3){
+        StaticTextValTanque3->SetLabel(mystring);
+        SetValoresTanques();
+    }
+
 
 }
 
@@ -451,61 +444,57 @@ void Projeto1Frm::OnBitmapButtonV1inClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Hide();
     StaticBoxTanque1->Disable();
-
 }
 void Projeto1Frm::OnBitmapButtonV1ouClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Show();
     StaticBoxTanque1->Enable();
-
 }
 
 void Projeto1Frm::OnBitmapButtonV2inClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Hide();
     StaticBoxTanque2->Disable();
-
-
 }
 void Projeto1Frm::OnBitmapButtonV2ouClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Show();
     StaticBoxTanque2->Enable();
-
 }
 
 
 void Projeto1Frm::OnBitmapButtonV3inClick(wxCommandEvent& event)
 {
-    BitmapButtonV3in->Hide();
-
-
+    BitmapButtonV3ou->Show();
 }
 void Projeto1Frm::OnBitmapButtonV3ouClick(wxCommandEvent& event)
 {
+    BitmapButtonV3ou->Hide();
     BitmapButtonV3in->Show();
-
+    EsvaziaTanque(1);
 }
 
 void Projeto1Frm::OnBitmapButtonV4inClick(wxCommandEvent& event)
 {
-    BitmapButtonV4in->Hide();
-
-
+    BitmapButtonV4ou->Show();
 }
 void Projeto1Frm::OnBitmapButtonV4ouClick(wxCommandEvent& event)
 {
+    BitmapButtonV4ou->Hide();
     BitmapButtonV4in->Show();
+    EsvaziaTanque(2);
 
 }
 void Projeto1Frm::OnBitmapButtonV5inClick(wxCommandEvent& event)
 {
-    BitmapButtonV5in->Hide();
+    BitmapButtonV5ou->Show();
+
 
 
 }
 void Projeto1Frm::OnBitmapButtonV5ouClick(wxCommandEvent& event)
 {
+    BitmapButtonV5ou->Hide();
     BitmapButtonV5in->Show();
 
 }
@@ -520,4 +509,23 @@ void Projeto1Frm::ZeraPainel()
 {
     SpinCtrlTanque1->SetValue(0);
     SpinCtrlTanque2->SetValue(0);
+}
+void Projeto1Frm::EsvaziaTanque(int tanque)
+{
+    if (tanque = 1)
+    {
+        ValTanque3Atual = ValTanque3Atual + ValTanque1Atual;
+        ValTanque1Atual = 0;
+        SetValores(0,1);
+        SetValores(ValTanque3Atual, 3);
+        Refresh();
+    }
+    if (tanque = 2)
+    {
+        ValTanque3Atual = ValTanque3Atual + ValTanque2Atual;
+        ValTanque2Atual = 0;
+        SetValores(0,2);
+        SetValores(ValTanque3Atual, 3);
+        Refresh();
+    }
 }

@@ -3800,3 +3800,174 @@
 	<wx/statbmp.h>
 	<wx/frame.h>
 
+1434331400 source:c:\users\luispaulo\documents\github\pac_tp2\help\help.cpp
+	"Help.h"
+
+1434331056 c:\users\luispaulo\documents\github\pac_tp2\help\help.h
+	<wx/wx.h>
+	"wx/html/htmlwin.h"
+	<wx/statline.h>
+
+1433430082 source:c:\users\luispaulo\documents\github\pac_tp2\icon\icon.cpp
+	"icon.h"
+
+1433429768 c:\users\luispaulo\documents\github\pac_tp2\icon\icon.h
+	<wx/wx.h>
+
+1434378204 source:c:\users\luispaulo\documents\github\pac_tp2\log\log.cpp
+	"Log.h"
+	"../sqlite/ComandosBD.h"
+	<wx/datetime.h>
+
+1434377914 c:\users\luispaulo\documents\github\pac_tp2\log\log.h
+	<wx/wx.h>
+
+1435426206 c:\users\luispaulo\documents\github\pac_tp2\sqlite\comandosbd.h
+	"wxsqlite3.h"
+
+1435426206 c:\users\luispaulo\documents\github\pac_tp2\sqlite\wxsqlite3.h
+	<wx/arrstr.h>
+	<wx/datetime.h>
+	<wx/buffer.h>
+	<wx/hashmap.h>
+	<wx/regex.h>
+	<wx/string.h>
+	<wx/wxsqlite3def.h>
+
+1435631357 source:c:\users\luispaulo\documents\github\pac_tp2\login\loginfrm.cpp
+	"loginFrm.h"
+	"../Log/Log.h"
+	"../sqlite/ComandosBD.h"
+	"../Md5/md5.h"
+
+1435435709 c:\users\luispaulo\documents\github\pac_tp2\login\loginfrm.h
+	<wx/wx.h>
+	<wx/frame.h>
+	<wx/wxprec.h>
+	<wx/button.h>
+	<wx/textctrl.h>
+	<wx/stattext.h>
+	"../Projeto1Frm.h"
+
+1435776274 c:\users\luispaulo\documents\github\pac_tp2\projeto1frm.h
+	<wx/wx.h>
+	<wx/frame.h>
+	<wx/wxprec.h>
+	<wx/filedlg.h>
+	<wx/menu.h>
+	<wx/clrpicker.h>
+	<wx/stattext.h>
+	<wx/spinctrl.h>
+	<wx/statbox.h>
+	"wx/KWIC/LCDWindow.h"
+
+1434304100 c:\users\luispaulo\documents\github\pac_tp2\md5\md5.h
+	<cstring>
+	<iostream>
+
+1434304100 source:c:\users\luispaulo\documents\github\pac_tp2\md5\md5.cpp
+	"md5.h"
+	<cstdio>
+
+1434382596 source:c:\users\luispaulo\documents\github\pac_tp2\newuser\newuser.cpp
+	"NewUser.h"
+	"../sqlite/ComandosBD.h"
+	"../Log/Log.h"
+	"../Md5/md5.h"
+
+1434156580 c:\users\luispaulo\documents\github\pac_tp2\newuser\newuser.h
+	<wx/wx.h>
+	<wx/frame.h>
+	<wx/wxprec.h>
+	<wx/button.h>
+	<wx/textctrl.h>
+	<wx/stattext.h>
+
+1435535169 source:c:\users\luispaulo\documents\github\pac_tp2\projeto1app.cpp
+	"Projeto1App.h"
+	<wx/splash.h>
+	"wx/help.h"
+	"wx/fs_zip.h"
+	"Login/LoginFrm.h"
+	"Log/Log.h"
+	<wx/translation.h>
+	"ImagePanel.h"
+
+1434377222 c:\users\luispaulo\documents\github\pac_tp2\projeto1app.h
+	<wx/wx.h>
+	<wx/wxprec.h>
+	<wx/intl.h>
+
+1435537891 c:\users\luispaulo\documents\github\pac_tp2\imagepanel\imagepanel.h
+	<wx/wx.h>
+	<wx/wx.h>
+
+1435781059 source:c:\users\luispaulo\documents\github\pac_tp2\projeto1frm.cpp
+	<wx/wx.h>
+	"wx/html/htmlwin.h"
+	<wx/statline.h>
+	"Projeto1Frm.h"
+	"icon/icon.h"
+	"NewUser/NewUser.h"
+	"Login/LoginFrm.h"
+	"Log/Log.h"
+	"ImagePanel.h"
+
+1431819694 source:c:\users\luispaulo\documents\github\pac_tp2\splash\splash.cpp
+
+1434331965 source:c:\users\luispaulo\documents\github\pac_tp2\sqlite\comandosbd.cpp
+	"ComandosBD.h"
+
+1435770214 source:c:\users\luispaulo\documents\github\pac_tp2\teste1.cpp
+	"teste1.h"
+	"lcdwindow.cpp"
+	<wx/bitmap.h>
+	<wx/settings.h>
+	<wx/font.h>
+	<wx/intl.h>
+	<wx/image.h>
+	<wx/string.h>
+
+1435721576 c:\users\luispaulo\documents\github\pac_tp2\teste1.h
+	<wx/panel.h>
+	<wx/bmpbuttn.h>
+	<wx/frame.h>
+	<wx/gauge.h>
+
+1435685134 c:\users\luispaulo\documents\github\pac_tp2\lcdwindow.cpp
+	"wx/lcdwindow.h"
+
+1425343196 source:c:\users\luispaulo\documents\github\pac_tp2\wxsqlite3.cpp
+	"wx/wxprec.h"
+	"wx/wx.h"
+	"wx/regex.h"
+	"wx/thread.h"
+	"wx/wxsqlite3.h"
+	"wx/wxsqlite3opt.h"
+	"sqlite3.h"
+	"sqlite3userauth.h"
+	"wx/dynlib.h"
+	"wx/wxsqlite3dyn.h"
+	"wx/wxsqlite3dyn.h"
+	"wx/wxsqlite3dyn.h"
+	<string.h>
+	<assert.h>
+
+1424910972 c:\users\luispaulo\documents\github\pac_tp2\sqlite3.h
+	<stdarg.h>
+
+1435724546 source:c:\users\luispaulo\documents\github\pac_tp2\zoom.cpp
+	"Zoom.h"
+	<wx/bitmap.h>
+	<wx/intl.h>
+	<wx/image.h>
+	<wx/string.h>
+
+1435724521 c:\users\luispaulo\documents\github\pac_tp2\zoom.h
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/statbox.h>
+	<wx/panel.h>
+	<wx/statbmp.h>
+	<wx/frame.h>
+
