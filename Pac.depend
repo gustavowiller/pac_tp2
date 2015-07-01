@@ -2966,7 +2966,7 @@
 	<commdlg.h>
 	"wx/msw/winundef.h"
 
-1435723678 c:\users\luispaulo\documents\code\prj\projeto1frm.h
+1435775279 c:\users\luispaulo\documents\code\prj\projeto1frm.h
 	<wx/wx.h>
 	<wx/frame.h>
 	<wx/wxprec.h>
@@ -3315,7 +3315,7 @@
 1434377914 c:\users\luispaulo\documents\code\prj\log\log.h
 	<wx/wx.h>
 
-1435720881 source:c:\users\luispaulo\documents\code\prj\projeto1frm.cpp
+1435775293 source:c:\users\luispaulo\documents\code\prj\projeto1frm.cpp
 	<wx/wx.h>
 	"wx/html/htmlwin.h"
 	<wx/statline.h>
@@ -3591,7 +3591,7 @@
 
 1435629994 c:\wxwidgets\include\wx\kwic\lcdwindow.h
 
-1435722751 source:c:\users\luispaulo\documents\code\prj\teste1.cpp
+1435770214 source:c:\users\luispaulo\documents\code\prj\teste1.cpp
 	"teste1.h"
 	"lcdwindow.cpp"
 	<wx/bitmap.h>
@@ -3618,4 +3618,19 @@
 
 1435685134 c:\users\luispaulo\documents\code\prj\lcdwindow.cpp
 	"wx/lcdwindow.h"
+
+1435724546 source:c:\users\luispaulo\documents\code\prj\zoom.cpp
+	"Zoom.h"
+	<wx/bitmap.h>
+	<wx/intl.h>
+	<wx/image.h>
+	<wx/string.h>
+
+1435724521 c:\users\luispaulo\documents\code\prj\zoom.h
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/statbox.h>
+	<wx/panel.h>
+	<wx/statbmp.h>
+	<wx/frame.h>
 
