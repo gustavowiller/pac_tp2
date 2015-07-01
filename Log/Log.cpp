@@ -54,7 +54,7 @@ void Log::Salva_Log_Valvula(int id_valvula,int status_valvula){
 
 
 
-void Log::Salva_Log_Processo(int tanque_id,int entrada_ou_saida, double valor){
+void Log::Salva_Log_Processo(int t1,int t2, int t3, int e1, int e2){
     //**** Pega a data Atual *********
     wxDateTime now = wxDateTime::Now();
     wxString data_hora = now.Format();
@@ -69,16 +69,21 @@ void Log::Salva_Log_Processo(int tanque_id,int entrada_ou_saida, double valor){
     wxString id_usuario;
     id_usuario << id_u;
 
-    wxString tanque;
-    tanque << tanque_id;
-    wxString status;
-    status << entrada_ou_saida;
-    wxString st_valor;
-    st_valor << valor;
+    wxString wt1;
+    wt1 << t1;
+    wxString wt2;
+    wt2 << t2;
+    wxString wt3;
+    wt3 << t3;
+    wxString we1;
+    we1 << e1;
+    wxString we2;
+    we2 << e2;
+
 
 
     ComandosBD* con;
-    int resultado = con->InsertSql("insert into log_processo(id, tanque_id, valor, entrada_ou_saida, usuario, data) values(null,"+tanque+","+st_valor+","+status+"',"+id_usuario+",  '"+data_hora+"');");
+    int resultado = con->InsertSql("insert into log_processo(id, tanque_1, tanque_2, tanque_3, entrada_tanque_1, entrada_tanque_2, usuario, data) values(null,"+wt1+","+wt2+","+wt3+"',"+we1+","+we2+"',"+id_usuario+",  '"+data_hora+"');");
     if (resultado == 0){
         wxLogMessage("Erro ao salvar Log Valvula");
     }
