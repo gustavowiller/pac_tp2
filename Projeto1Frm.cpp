@@ -451,27 +451,31 @@ void Projeto1Frm::OnBitmapButtonV1inClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Hide();
     StaticBoxTanque1->Disable();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,0);
 }
 void Projeto1Frm::OnBitmapButtonV1ouClick(wxCommandEvent& event)
 {
     BitmapButtonV1in->Show();
     StaticBoxTanque1->Enable();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,1);
 }
 
 void Projeto1Frm::OnBitmapButtonV2inClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Hide();
     StaticBoxTanque2->Disable();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,1);
 
 }
 void Projeto1Frm::OnBitmapButtonV2ouClick(wxCommandEvent& event)
 {
     BitmapButtonV2in->Show();
     StaticBoxTanque2->Enable();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(0,2);
 }
 
 
@@ -479,35 +483,41 @@ void Projeto1Frm::OnBitmapButtonV3inClick(wxCommandEvent& event)
 {
     BitmapButtonV3in->Hide();
 
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,3);
 }
 void Projeto1Frm::OnBitmapButtonV3ouClick(wxCommandEvent& event)
 {
     BitmapButtonV3in->Show();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(0,3);
 }
 
 void Projeto1Frm::OnBitmapButtonV4inClick(wxCommandEvent& event)
 {
     BitmapButtonV4in->Hide();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(1,4);
 
 }
 void Projeto1Frm::OnBitmapButtonV4ouClick(wxCommandEvent& event)
 {
     BitmapButtonV4in->Show();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(0,4);
 }
 void Projeto1Frm::OnBitmapButtonV5inClick(wxCommandEvent& event)
 {
     BitmapButtonV5in->Hide();
 
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(5,1);
 }
 void Projeto1Frm::OnBitmapButtonV5ouClick(wxCommandEvent& event)
 {
     BitmapButtonV5in->Show();
-
+    Log* S_Log;
+    S_Log->Salva_Log_Valvula(5,0);
 }
 
 void Projeto1Frm::SetGauge(int T1, int T2, int T3)

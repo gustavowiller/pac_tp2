@@ -3620,11 +3620,12 @@
 1435685134 c:\users\luispaulo\documents\code\prj\lcdwindow.cpp
 	"wx/lcdwindow.h"
 
-<<<<<<< HEAD
+1435724546 D
+
 1434331400 source:c:\users\gustavo\documents\github\pac_tp2\help\help.cpp
 	"Help.h"
 
-1435758445 c:\users\gustavo\documents\github\pac_tp2\help\help.h
+1435776382 c:\users\gustavo\documents\github\pac_tp2\help\help.h
 	<wx/wx.h>
 	"wx/html/htmlwin.h"
 	<wx/statline.h>
@@ -3635,12 +3636,12 @@
 1433429768 c:\users\gustavo\documents\github\pac_tp2\icon\icon.h
 	<wx/wx.h>
 
-1435774028 source:c:\users\gustavo\documents\github\pac_tp2\log\log.cpp
+1435778861 source:c:\users\gustavo\documents\github\pac_tp2\log\log.cpp
 	"Log.h"
 	"../sqlite/ComandosBD.h"
 	<wx/datetime.h>
 
-1434377914 c:\users\gustavo\documents\github\pac_tp2\log\log.h
+1435778259 c:\users\gustavo\documents\github\pac_tp2\log\log.h
 	<wx/wx.h>
 
 1435426206 c:\users\gustavo\documents\github\pac_tp2\sqlite\comandosbd.h
@@ -3655,7 +3656,7 @@
 	<wx/string.h>
 	<wx/wxsqlite3def.h>
 
-1435775161 source:c:\users\gustavo\documents\github\pac_tp2\login\loginfrm.cpp
+1435776382 source:c:\users\gustavo\documents\github\pac_tp2\login\loginfrm.cpp
 	"loginFrm.h"
 	"../Log/Log.h"
 	"../sqlite/ComandosBD.h"
@@ -3670,7 +3671,7 @@
 	<wx/stattext.h>
 	"../Projeto1Frm.h"
 
-1435775174 c:\users\gustavo\documents\github\pac_tp2\projeto1frm.h
+1435776384 c:\users\gustavo\documents\github\pac_tp2\projeto1frm.h
 	<wx/wx.h>
 	<wx/frame.h>
 	<wx/wxprec.h>
@@ -3690,13 +3691,13 @@
 	"md5.h"
 	<cstdio>
 
-1435772870 source:c:\users\gustavo\documents\github\pac_tp2\newuser\newuser.cpp
+1435776382 source:c:\users\gustavo\documents\github\pac_tp2\newuser\newuser.cpp
 	"NewUser.h"
 	"../sqlite/ComandosBD.h"
 	"../Log/Log.h"
 	"../Md5/md5.h"
 
-1435771335 c:\users\gustavo\documents\github\pac_tp2\newuser\newuser.h
+1435776382 c:\users\gustavo\documents\github\pac_tp2\newuser\newuser.h
 	<wx/wx.h>
 	<wx/frame.h>
 	<wx/wxprec.h>
@@ -3705,7 +3706,7 @@
 	<wx/stattext.h>
 	<wx/radiobut.h>
 
-1435775293 source:c:\users\gustavo\documents\github\pac_tp2\projeto1app.cpp
+1435776382 source:c:\users\gustavo\documents\github\pac_tp2\projeto1app.cpp
 	"Projeto1App.h"
 	<wx/splash.h>
 	"wx/help.h"
@@ -3724,7 +3725,7 @@
 	<wx/wx.h>
 	<wx/wx.h>
 
-1435775316 source:c:\users\gustavo\documents\github\pac_tp2\projeto1frm.cpp
+1435779477 source:c:\users\gustavo\documents\github\pac_tp2\projeto1frm.cpp
 	<wx/wx.h>
 	"wx/html/htmlwin.h"
 	<wx/statline.h>
@@ -3779,24 +3780,23 @@
 	<stdarg.h>
 
 1435724546 source:c:\users\gustavo\documents\github\pac_tp2\zoom.cpp
-=======
+
 1435724546 source:c:\users\luispaulo\documents\code\prj\zoom.cpp
->>>>>>> origin/master
+
+1435724521 gin/master
 	"Zoom.h"
 	<wx/bitmap.h>
 	<wx/intl.h>
 	<wx/image.h>
 	<wx/string.h>
-
-<<<<<<< HEAD
-1435724521 c:\users\gustavo\documents\github\pac_tp2\zoom.h
-=======
-1435724521 c:\users\luispaulo\documents\code\prj\zoom.h
->>>>>>> origin/master
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/statbox.h>
 	<wx/panel.h>
 	<wx/statbmp.h>
 	<wx/frame.h>
+
+1435724521 c:\users\gustavo\documents\github\pac_tp2\zoom.h
+
+1435724521 c:\users\luispaulo\documents\code\prj\zoom.h
 
