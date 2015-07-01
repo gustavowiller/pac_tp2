@@ -10,6 +10,7 @@ public:
     void InserirUsuarios();
     int InsertSql(wxString sql);
     int SelectSql(wxString sql);
+    wxString SelectSqlUser(wxString sql);
 };
 
 

@@ -12,7 +12,9 @@
 //(*IdInit(teste1)
 const long teste1::ID_BITMAPBUTTON1 = wxNewId();
 const long teste1::ID_GAUGE1 = wxNewId();
+const long teste1::ID_CHECKBOX1 = wxNewId();
 const long teste1::ID_PANEL1 = wxNewId();
+const long teste1::ID_STATUSBAR1 = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(teste1,wxFrame)
@@ -29,11 +31,19 @@ teste1::teste1(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& s
 	Gauge1 = new wxGauge(Panel1, ID_GAUGE1, 100, wxPoint(136,40), wxSize(28,176), wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGE1"));
 	Gauge1->SetValue(50);
 	Gauge1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
-	Gauge1->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHT));
+	Gauge1->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_MENUTEXT));
 	wxFont Gauge1Font(10,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,_T("@Yu Gothic UI"),wxFONTENCODING_DEFAULT);
 	Gauge1->SetFont(Gauge1Font);
 	Gauge1->SetToolTip(_("Teste"));
 	Gauge1->SetHelpText(_("Valor do liquido contido no tanque 1"));
+	CheckBox1 = new wxCheckBox(Panel1, ID_CHECKBOX1, _("Label"), wxPoint(232,136), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+	CheckBox1->SetValue(false);
+	StatusBar = new wxStatusBar(this, ID_STATUSBAR1, 0, _T("ID_STATUSBAR1"));
+	int __wxStatusBarWidths_1[3] = { -70, -80, -80 };
+	int __wxStatusBarStyles_1[3] = { wxSB_NORMAL, wxSB_NORMAL, wxSB_NORMAL };
+	StatusBar->SetFieldsCount(3,__wxStatusBarWidths_1);
+	StatusBar->SetStatusStyles(3,__wxStatusBarStyles_1);
+	SetStatusBar(StatusBar);
 
 	Connect(ID_BITMAPBUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&teste1::OnBitmapButton1Click);
 	//*)

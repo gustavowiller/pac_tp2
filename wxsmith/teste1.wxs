@@ -15,7 +15,7 @@
 				<pos>136,40</pos>
 				<size>28,176</size>
 				<fg>wxSYS_COLOUR_BTNTEXT</fg>
-				<bg>wxSYS_COLOUR_HIGHLIGHT</bg>
+				<bg>wxSYS_COLOUR_MENUTEXT</bg>
 				<font>
 					<size>10</size>
 					<style>normal</style>
@@ -28,6 +28,15 @@
 				<help>Valor do liquido contido no tanque 1</help>
 				<style>wxGA_VERTICAL</style>
 			</object>
+			<object class="wxCheckBox" name="ID_CHECKBOX1" variable="CheckBox1" member="yes">
+				<label>Label</label>
+				<pos>232,136</pos>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar" member="yes">
+			<fields>3</fields>
+			<widths>-70,-80,-80</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL</styles>
 		</object>
 	</object>
 </wxsmith>

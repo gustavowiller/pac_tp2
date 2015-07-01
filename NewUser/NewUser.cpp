@@ -71,9 +71,9 @@ void NewUser::CreateGUIControls()
 
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("Nome de usuário"), wxPoint(17,12), wxDefaultSize, 0, _("WxStaticText1"));
 
-	WxStaticTextIsAdmin = new wxStaticText(this, ID_WXSTATICTEXTISADMIN, _("Perfil Administrador"), wxPoint(17,134), wxDefaultSize, 0, _("WxStaticTextIsAdmin"));
+	//WxStaticTextIsAdmin = new wxStaticText(this, ID_WXSTATICTEXTISADMIN, _("Perfil Administrador"), wxPoint(17,134), wxDefaultSize, 0, _("WxStaticTextIsAdmin"));
 
-    WxRadioButtonIsAdmin = new wxRadioButton(this, ID_WXRADIOBUTTONISADMIN, _(""),  wxPoint(17,154), wxDefaultSize, 0,wxDefaultValidator, _("WxRadioButtonIsAdmin"));
+    WxRadioButtonIsAdmin = new wxCheckBox(this, ID_WXRADIOBUTTONISADMIN, _("Administrador"),  wxPoint(17,150), wxDefaultSize, 0,wxDefaultValidator, _("WxRadioButtonIsAdmin"));
 	SetTitle(_("Novo Usuário"));
 	SetIcon(wxNullIcon);
 	SetSize(8,8,340,240);

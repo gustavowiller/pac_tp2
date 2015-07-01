@@ -113,6 +113,8 @@ class Projeto1Frm : public wxFrame
 		wxGauge* GaugeT2;
 		wxGauge* GaugeT3;
 
+		wxStatusBar* StatusBar;
+
 
 		//Imagens
         wxString img1 = "ImagePanel/img1.png";
@@ -210,6 +212,9 @@ class Projeto1Frm : public wxFrame
         //
         static const long ID_BITMAPBUTTONV5IN;
 		static const long ID_BITMAPBUTTONV5OU;
+
+		static const long ID_STATUSBAR1;
+
 
 		void OnAtualizarClick(wxCommandEvent& event);
 		void OnColourPickerCtrl1ColourChanged(wxColourPickerEvent& event);

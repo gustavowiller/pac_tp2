@@ -2,10 +2,12 @@
 #define TESTE1_H
 
 //(*Headers(teste1)
+#include <wx/checkbox.h>
 #include <wx/panel.h>
 #include <wx/bmpbuttn.h>
 #include <wx/frame.h>
 #include <wx/gauge.h>
+#include <wx/statusbr.h>
 //*)
 
 class teste1: public wxFrame
@@ -19,6 +21,8 @@ class teste1: public wxFrame
 		wxGauge* Gauge1;
 		wxPanel* Panel1;
 		wxBitmapButton* BitmapButton1;
+		wxCheckBox* CheckBox1;
+		wxStatusBar* StatusBar;
 		//*)
 
 	protected:
@@ -26,7 +30,9 @@ class teste1: public wxFrame
 		//(*Identifiers(teste1)
 		static const long ID_BITMAPBUTTON1;
 		static const long ID_GAUGE1;
+		static const long ID_CHECKBOX1;
 		static const long ID_PANEL1;
+		static const long ID_STATUSBAR1;
 		//*)
 
 	private:

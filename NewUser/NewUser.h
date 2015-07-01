@@ -63,7 +63,7 @@ class NewUser : public wxFrame
 		wxStaticText *WxStaticText3;
 		wxStaticText *WxStaticText2;
 		wxStaticText *WxStaticText1;
-		wxRadioButton *WxRadioButtonIsAdmin;
+		wxCheckBox *WxRadioButtonIsAdmin;
 		////GUI Control Declaration End
 
 	private:

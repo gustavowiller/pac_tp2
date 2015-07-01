@@ -16,6 +16,7 @@
 #include "Login/LoginFrm.h" //Incluir Tela de Login
 #include "Log/Log.h"        //Incluir Logs
 #include "ImagePanel.h"
+#include "../sqlite/ComandosBD.h"
 
 //tanque 1
 const long Projeto1Frm::ID_STATICBOXTANQUE1 = wxNewId();
@@ -60,6 +61,11 @@ const long Projeto1Frm::ID_BITMAPBUTTONV5OU = wxNewId();
 const long Projeto1Frm::ID_GAUGET1 = wxNewId(); //Componente GAuge tanque1
 const long Projeto1Frm::ID_GAUGET2 = wxNewId(); //Componente GAuge tanque2
 const long Projeto1Frm::ID_GAUGET3 = wxNewId(); //Componente GAuge tanque3
+
+const long Projeto1Frm::ID_STATUSBAR1 = wxNewId(); //Componente StatusBAr
+
+
+
 
 
 
@@ -112,7 +118,6 @@ void Projeto1Frm::CreateGUIControls()
 	//wxDev-C++ designer will remove them.
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
-
 
 
 
@@ -259,6 +264,29 @@ void Projeto1Frm::CreateGUIControls()
     GaugeT3->SetToolTip(_("Valor do liquido contido no tanque 3"));
 	GaugeT3->SetHelpText(_("Valor do liquido contido no tanque 3"));
 	GaugeT3->SetForegroundColour(wxColour(27,16,150));
+	//****************
+    //Status BAr
+	StatusBar = new wxStatusBar(this, ID_STATUSBAR1, 0, _T("ID_STATUSBAR1"));
+	int __wxStatusBarWidths_1[3] = { -70, -80, -80 };
+	int __wxStatusBarStyles_1[3] = { wxSB_NORMAL, wxSB_NORMAL, wxSB_NORMAL };
+	StatusBar->SetFieldsCount(3,__wxStatusBarWidths_1);
+	StatusBar->SetStatusStyles(3,__wxStatusBarStyles_1);
+	SetStatusBar(StatusBar);
+    StatusBar->PushStatusText("PRONTO",0);
+	//******************
+
+	//Buscar ID
+    int id_u;
+    FILE *arq = fopen("sessao.dat", "rb");
+    fread (&id_u, sizeof(int), 1, arq);
+    //Converte Inteiro para Sttring
+    wxString id_usuario;
+    id_usuario << id_u;
+    //Buscar Nome de Usuário
+    ComandosBD* con;
+    wxString nome = con->SelectSql("select nome from usuarios where usuarios.id ="+id_usuario+";");
+    //************************
+
 
 	SetTitle(_("Supervisório - Versão 1 - TP3 - PAC"));
 	SetIcon(wxNullIcon);
