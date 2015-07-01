@@ -29,6 +29,10 @@ const long Projeto1Frm::ID_SPINCTRLTANQUE2 = wxNewId();
 const long Projeto1Frm::ID_STATICTEXTTANQUE2 = wxNewId();
 const long Projeto1Frm::ID_PANELVALTANQUE2 = wxNewId();
 const long Projeto1Frm::ID_STATICTEXTVALTANQUE2 = wxNewId();
+//tanque 3
+const long Projeto1Frm::ID_STATICBOXTANQUE3 = wxNewId();
+const long Projeto1Frm::ID_PANELVALTANQUE3 = wxNewId();
+const long Projeto1Frm::ID_STATICTEXTVALTANQUE3 = wxNewId();
 
 //**************************************************************
 const long Projeto1Frm::ID_STATICBOXALTERARCOR = wxNewId();
@@ -174,7 +178,7 @@ void Projeto1Frm::CreateGUIControls()
 
 
 	//***********Ref tanque 2
-	StaticBoxTanque2 = new wxStaticBox(Panel2, ID_STATICBOXTANQUE2, _("Tanque 2"), wxPoint(60,190), wxSize(224,112), 0, _T("ID_STATICBOX1"));
+	StaticBoxTanque2 = new wxStaticBox(Panel2, ID_STATICBOXTANQUE2, _("Tanque 2"), wxPoint(60,190), wxSize(224,112), 0, _T("ID_STATICBOX2"));
 
 	PanelValTanque2 = new wxPanel(StaticBoxTanque2, ID_PANELVALTANQUE2, wxPoint(15,40), wxSize(75,30), wxTAB_TRAVERSAL, _T("ID_PANELVALTANQUE2"));
 	PanelValTanque2->SetBackgroundColour(wxColour(0,0,0));
@@ -190,7 +194,17 @@ void Projeto1Frm::CreateGUIControls()
 	SpinCtrlTanque2 = new wxSpinCtrl(StaticBoxTanque2, ID_SPINCTRLTANQUE2, _T("0"), wxPoint(140,65), wxSize(54,21), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
 	SpinCtrlTanque2->SetValue(_T("0"));
 	SpinCtrlTanque2->SetRange(0,100);
-	//StaticText2 = new wxStaticText(StaticBoxTanque2, ID_STATICTEXTTANQUE1, _("Valor Atual"), wxPoint(25,20), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+
+    //***********Ref tanque 3
+    StaticBoxTanque3 = new wxStaticBox(Panel2, ID_STATICBOXTANQUE3, _("Tanque 3"), wxPoint(60,370), wxSize(224,112), 0, _T("ID_STATICBOX3"));
+    PanelValTanque3 = new wxPanel(StaticBoxTanque3, ID_PANELVALTANQUE3, wxPoint(15,40), wxSize(75,30), wxTAB_TRAVERSAL, _T("ID_PANELVALTANQUE3"));
+	PanelValTanque3->SetBackgroundColour(wxColour(0,0,0));
+	StaticTextValTanque3 = new wxStaticText(PanelValTanque3, ID_STATICTEXTVALTANQUE3, _("000"), wxPoint(7,3), wxDefaultSize, 0, _T("ID_STATICTEXTVALTANQUE3"));
+	StaticTextValTanque3->SetForegroundColour(wxColour(25,176,11));
+	StaticTextValTanque3->SetBackgroundColour(wxColour(0,0,0));
+	wxFont StaticText3Font(12,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Impact"),wxFONTENCODING_DEFAULT);
+	StaticTextValTanque3->SetFont(StaticText3Font);
+
 
     //**** Sobre as valvulas
     BitmapButtonV1in = new wxBitmapButton(Panel1, ID_BITMAPBUTTONV1IN, wxBitmap(wxImage(_T("ImagePanel\\v1.png"))), wxPoint(73,99), wxSize(40,40), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTONV1IN"));
@@ -231,21 +245,21 @@ void Projeto1Frm::CreateGUIControls()
     wxImage::AddHandler( new wxPNGHandler );
 	m_bgImage = new wxStaticBitmap( Panel1, wxID_ANY, wxBitmap( img8, wxBITMAP_TYPE_PNG ), wxDefaultPosition, wxDefaultSize, 0 );
 
-    GaugeT1 = new wxGauge(m_bgImage, ID_GAUGET1, 100, wxPoint(420,145), wxSize(28,176), wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET1"));
-    GaugeT1->SetValue(5);
+    GaugeT1 = new wxGauge(m_bgImage, ID_GAUGET1, 100, wxPoint(420,140), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET1"));
+    GaugeT1->SetValue(0);
     GaugeT1->SetToolTip(_("Valor do liquido contido no tanque 1"));
 	GaugeT1->SetHelpText(_("Valor do liquido contido no tanque 1"));
-	GaugeT1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
-    GaugeT2 = new wxGauge(m_bgImage, ID_GAUGET2, 100, wxPoint(810,145), wxSize(28,176), wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET2"));
-    GaugeT2->SetValue(5);
+	GaugeT1->SetForegroundColour(wxColour(27,16,150));
+    GaugeT2 = new wxGauge(m_bgImage, ID_GAUGET2, 100, wxPoint(810,140), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET2"));
+    GaugeT2->SetValue(0);
     GaugeT2->SetToolTip(_("Valor do liquido contido no tanque 2"));
 	GaugeT2->SetHelpText(_("Valor do liquido contido no tanque 2"));
-	GaugeT2->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
-    GaugeT3 = new wxGauge(m_bgImage, ID_GAUGET3, 100, wxPoint(307,469), wxSize(28,176), wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET3"));
+	GaugeT2->SetForegroundColour(wxColour(27,16,150));
+    GaugeT3 = new wxGauge(m_bgImage, ID_GAUGET3, 100, wxPoint(307,469), wxDefaultSize, wxGA_VERTICAL, wxDefaultValidator, _T("ID_GAUGET3"));
     GaugeT3->SetValue(0);
     GaugeT3->SetToolTip(_("Valor do liquido contido no tanque 3"));
 	GaugeT3->SetHelpText(_("Valor do liquido contido no tanque 3"));
-	GaugeT3->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+	GaugeT3->SetForegroundColour(wxColour(27,16,150));
 
 	SetTitle(_("Supervisório - Versão 1 - TP3 - PAC"));
 	SetIcon(wxNullIcon);
@@ -389,7 +403,7 @@ void Projeto1Frm::SetValoresTanques()
     ValTanque2Atual = ValTanque2Atual+ValTanque2;
 
     SetGauge(ValTanque1Atual, ValTanque2Atual, 0);
-    zera_painel();
+    ZeraPainel();
     /*
     wxImage::AddHandler( new wxPNGHandler );
     if((ValTanque1Atual < 250)){
@@ -417,20 +431,20 @@ void Projeto1Frm::SetValores(int val, int tanque)
 
 void Projeto1Frm::OnSpinCtrl2Change(wxSpinEvent& event)
 {
-    ValTanque2Atual = ValTanque2Atual+1;
-    SetValores(ValTanque2Atual, 2);
+   if (ValTanque2Atual <= 100)
+   {
+        ValTanque2Atual = ValTanque2Atual+1;
+        SetValores(ValTanque2Atual, 2);
+   }
 }
 
 void Projeto1Frm::OnSpinCtrl1Change(wxSpinEvent& event)
 {
-    ValTanque1Atual = ValTanque1Atual+1;
-    SetValores(ValTanque1Atual, 1);
-    /*ValTanque1 = SpinCtrlTanque1->GetValue();
-    ValTanque2 = SpinCtrlTanque2->GetValue();
-    ValTanque1Atual = ValTanque1Atual+ValTanque1;
-    ValTanque2Atual = ValTanque2Atual+ValTanque2;
-    SetValores(ValTanque2Atual, 1);
-    */
+    if (ValTanque1Atual <= 100)
+    {
+        ValTanque1Atual = ValTanque1Atual+1;
+        SetValores(ValTanque1Atual, 1);
+    }
 }
 
 void Projeto1Frm::OnBitmapButtonV1inClick(wxCommandEvent& event)
@@ -502,7 +516,7 @@ void Projeto1Frm::SetGauge(int T1, int T2, int T3)
     GaugeT2->SetValue(T2);
     GaugeT3->SetValue(T3);
 }
-void Projeto1Frm::zera_painel()
+void Projeto1Frm::ZeraPainel()
 {
     SpinCtrlTanque1->SetValue(0);
     SpinCtrlTanque2->SetValue(0);

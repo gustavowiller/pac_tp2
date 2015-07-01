@@ -98,11 +98,16 @@ class Projeto1Frm : public wxFrame
 		//Tanque 2
 
 		wxStaticText* StaticText2;  //TExto tanque 1
-		wxSpinCtrl* SpinCtrlTanque2; //SpinCtrl Tanque1
+		wxSpinCtrl* SpinCtrlTanque2; //SpinCtrl Tanque2
 		wxStaticBox* StaticBoxTanque2; //box tanque 2
 		wxStaticBox* StaticBoxTanque2Val; //val tanque 2
         wxPanel* PanelValTanque2;
 		wxStaticText* StaticTextValTanque2;
+
+		//Tanque 3
+		wxStaticBox* StaticBoxTanque3; //box tanque 2
+        wxPanel* PanelValTanque3;
+		wxStaticText* StaticTextValTanque3;
 
 		wxGauge* GaugeT1;
 		wxGauge* GaugeT2;
@@ -183,6 +188,13 @@ class Projeto1Frm : public wxFrame
 		static const long ID_STATICTEXTTANQUE2;
         static const long ID_PANELVALTANQUE2;
 		static const long ID_STATICTEXTVALTANQUE2;
+
+
+		//Tanque3
+		static const long ID_STATICBOXTANQUE3;
+		static const long ID_PANELVALTANQUE3;
+		static const long ID_STATICTEXTVALTANQUE3;
+
 		//Valvula Tanque 1 input
 		static const long ID_BITMAPBUTTONV1IN;
 		static const long ID_BITMAPBUTTONV1OU;
@@ -204,7 +216,8 @@ class Projeto1Frm : public wxFrame
         void SetValoresTanques();
         void SetValores(int valor, int tanque);
         void SetGauge(int T1, int T2, int T3);
-        void zera_painel();
+        void ZeraPainel();
+        void EsvaziaTanque(int valor, int tanque);
 
         void OnSpinCtrl2Change(wxSpinEvent& event);
         void OnSpinCtrl1Change(wxSpinEvent& event);
