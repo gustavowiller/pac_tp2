@@ -3641,7 +3641,7 @@
 	"../sqlite/ComandosBD.h"
 	<wx/datetime.h>
 
-1435783138 c:\users\gustavo\documents\github\pac_tp2\log\log.h
+1435786379 c:\users\gustavo\documents\github\pac_tp2\log\log.h
 	<wx/wx.h>
 
 1435426206 c:\users\gustavo\documents\github\pac_tp2\sqlite\comandosbd.h
@@ -3725,7 +3725,7 @@
 	<wx/wx.h>
 	<wx/wx.h>
 
-1435784977 source:c:\users\gustavo\documents\github\pac_tp2\projeto1frm.cpp
+1435785611 source:c:\users\gustavo\documents\github\pac_tp2\projeto1frm.cpp
 	<wx/wx.h>
 	"wx/html/htmlwin.h"
 	<wx/statline.h>
