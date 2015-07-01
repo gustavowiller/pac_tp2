@@ -217,7 +217,7 @@ class Projeto1Frm : public wxFrame
         void SetValores(int valor, int tanque);
         void SetGauge(int T1, int T2, int T3);
         void ZeraPainel();
-        void EsvaziaTanque(int valor, int tanque);
+        void EsvaziaTanque(int tanque);
 
         void OnSpinCtrl2Change(wxSpinEvent& event);
         void OnSpinCtrl1Change(wxSpinEvent& event);
