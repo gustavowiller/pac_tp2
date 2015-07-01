@@ -10,12 +10,12 @@ void Log::Salva_Log(int ev){
     int id_u;
     FILE *arq = fopen("sessao.dat", "rb");
     fread (&id_u, sizeof(int), 1, arq);
-    
-    
+
+
     //Converte Inteiro para Sttring
     wxString id_usuario;
     id_usuario << id_u;
-    
+
     wxString evento;
     evento << ev;
     ComandosBD* con;

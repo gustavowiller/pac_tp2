@@ -47,7 +47,7 @@ class Projeto1Frm : public wxFrame
 		DECLARE_EVENT_TABLE();
 
 	public:
-		Projeto1Frm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("Projeto1"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = Projeto1Frm_STYLE);
+		Projeto1Frm(wxWindow *parent, int is_admin, wxWindowID id = 1, const wxString &title = wxT("Projeto1"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = Projeto1Frm_STYLE);
 		virtual ~Projeto1Frm();
 		void Mnuabrir1002Click(wxCommandEvent& event);
 		void Mnufechar1003Click(wxCommandEvent& event);
@@ -58,7 +58,8 @@ class Projeto1Frm : public wxFrame
 		void Mnunovousurio1007Click(wxCommandEvent& event);
 		void Mnusalvar1005Click(wxCommandEvent& event);
 		void Mnusobre1009Click(wxCommandEvent& event);
-
+		int is_admin;
+        int usuario_id;
 	private:
 		//Do not add custom control declarations between
 		//GUI Control Declaration Start and GUI Control Declaration End.

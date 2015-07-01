@@ -89,9 +89,10 @@ BEGIN_EVENT_TABLE(Projeto1Frm,wxFrame)
 END_EVENT_TABLE()
 ////Event Table End
 
-Projeto1Frm::Projeto1Frm(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
+Projeto1Frm::Projeto1Frm(wxWindow *parent, int is_admin, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
 : wxFrame(parent, id, title, position, size, style)
 {
+    this->is_admin = is_admin;
 	CreateGUIControls();
 }
 
@@ -122,7 +123,6 @@ void Projeto1Frm::CreateGUIControls()
 	SetSizer(BoxSizer1);
 	SetSizer(BoxSizer1);
 
-
 	//*******************
 
     WxOpenFileDialog1 =  new wxFileDialog(this, _("Choose a file"), _(""), _(""), _("*.*"), wxFD_OPEN);
@@ -135,7 +135,9 @@ void Projeto1Frm::CreateGUIControls()
 	WxMenuBar1->Append(ID_MNU_ARQUIVO_1001_Mnu_Obj, _("Arquivo"));
 
 	wxMenu *ID_MNU_ACESSO_1006_Mnu_Obj = new wxMenu();
-	ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_NOVOUSU_RIO_1007, _("Novo Usuário"), _(""), wxITEM_NORMAL);
+	//Controle de acesso - Somente Adminstradores visualizam o menu para acessar cadastro de usuarios.
+    if(this->is_admin==1)
+        ID_MNU_ACESSO_1006_Mnu_Obj->Append(ID_MNU_NOVOUSU_RIO_1007, _("Novo Usuário"), _(""), wxITEM_NORMAL);
 	WxMenuBar1->Append(ID_MNU_ACESSO_1006_Mnu_Obj, _("Acesso"));
 
 	wxMenu *ID_MNU_AJUDA_1008_Mnu_Obj = new wxMenu();

@@ -59,7 +59,6 @@ bool Projeto1FrmApp::OnInit()
           wxSIMPLE_BORDER|wxSTAY_ON_TOP);
     wxYield();
     //fim splash
-    Projeto1Frm* frame = new Projeto1Frm(NULL);
     wxIcon icon3(wxT("images.ico"), wxBITMAP_TYPE_ICO, 16, 16);
     Login* TelaLogin = new Login(NULL);
     TelaLogin->SetIcon(icon3);

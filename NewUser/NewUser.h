@@ -22,13 +22,14 @@
 	#include <wx/wxprec.h>
 #endif
 
-//Do not add custom headers between 
+//Do not add custom headers between
 //Header Include Start and Header Include End.
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
 #include <wx/button.h>
 #include <wx/textctrl.h>
 #include <wx/stattext.h>
+#include <wx/radiobut.h>
 ////Header Include End
 
 ////Dialog Style Start
@@ -40,7 +41,7 @@ class NewUser : public wxFrame
 {
 	private:
 		DECLARE_EVENT_TABLE();
-		
+
 	public:
 		NewUser(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("New User"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = NewUser_STYLE);
 		virtual ~NewUser();
@@ -48,7 +49,7 @@ class NewUser : public wxFrame
 		void WxEdit2Updated(wxCommandEvent& event);
 		void WxButton1Click(wxCommandEvent& event);
 		void NewUserActivate0(wxActivateEvent& event);
-		
+
 	private:
 		//Do not add custom control declarations between
 		//GUI Control Declaration Start and GUI Control Declaration End.
@@ -58,11 +59,13 @@ class NewUser : public wxFrame
 		wxTextCtrl *WxEdit3;
 		wxTextCtrl *WxEdit2;
 		wxTextCtrl *WxEdit1;
+		wxStaticText *WxStaticTextIsAdmin;
 		wxStaticText *WxStaticText3;
 		wxStaticText *WxStaticText2;
 		wxStaticText *WxStaticText1;
+		wxRadioButton *WxRadioButtonIsAdmin;
 		////GUI Control Declaration End
-		
+
 	private:
 		//Note: if you receive any error with these enum IDs, then you need to
 		//change your old form code that are based on the #define control IDs.
@@ -71,6 +74,8 @@ class NewUser : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+            ID_WXRADIOBUTTONISADMIN = 1009,
+			ID_WXSTATICTEXTISADMIN = 1008,
 			ID_WXBUTTON1 = 1007,
 			ID_WXEDIT3 = 1006,
 			ID_WXEDIT2 = 1005,
@@ -81,7 +86,7 @@ class NewUser : public wxFrame
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values
 		};
-		
+
 	private:
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();

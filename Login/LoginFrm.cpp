@@ -100,7 +100,7 @@ void Login::WxButton2Click(wxCommandEvent& event)
  */
 void Login::WxButton1Click(wxCommandEvent& event)
 {
-    Projeto1Frm* frame = new Projeto1Frm(NULL);
+
     wxIcon icon3(wxT("images.ico"), wxBITMAP_TYPE_ICO, 16, 16);
 	// insert your code here
     wxString login = WxEdit1->GetValue();
@@ -108,12 +108,13 @@ void Login::WxButton1Click(wxCommandEvent& event)
 	ComandosBD* con;
     int usuario_id = con->SelectSql("select id from usuarios where usuarios.login = '"+login+"' and senha = '"+md5(std::string(senha.mb_str()))+"';");
     if (usuario_id != 0){
+        int is_admin = con->SelectSql("select is_admin as id from usuarios where usuarios.login = '"+login+"';");
+        Projeto1Frm* frame = new Projeto1Frm(NULL,is_admin);
          //Salvar sessão usuario
         FILE *arq = fopen("sessao.dat","wb");
         fwrite(&usuario_id,sizeof(int),1,arq);
         fclose(arq);
 
-         //Testar Log
         Log* S_Log;
         S_Log->Salva_Log(1);
 

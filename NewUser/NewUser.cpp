@@ -32,7 +32,7 @@
 BEGIN_EVENT_TABLE(NewUser,wxFrame)
 	////Manual Code Start
 	////Manual Code End
-	
+
 	EVT_CLOSE(NewUser::OnClose)
 	EVT_ACTIVATE(NewUser::NewUserActivate0)
 	EVT_BUTTON(ID_WXBUTTON1,NewUser::WxButton1Click)
@@ -57,7 +57,7 @@ void NewUser::CreateGUIControls()
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
 
-	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Cadastrar"), wxPoint(113,151), wxDefaultSize, 0, wxDefaultValidator, _("WxButton1"));
+	WxButton1 = new wxButton(this, ID_WXBUTTON1, _("Cadastrar"), wxPoint(113,171), wxDefaultSize, 0, wxDefaultValidator, _("WxButton1"));
 
 	WxEdit3 = new wxTextCtrl(this, ID_WXEDIT3, _(""),  wxPoint(17,114), wxSize(260, 20), 0, wxDefaultValidator, _("WxEdit3"));
 
@@ -71,11 +71,14 @@ void NewUser::CreateGUIControls()
 
 	WxStaticText1 = new wxStaticText(this, ID_WXSTATICTEXT1, _("Nome de usuário"), wxPoint(17,12), wxDefaultSize, 0, _("WxStaticText1"));
 
+	WxStaticTextIsAdmin = new wxStaticText(this, ID_WXSTATICTEXTISADMIN, _("Perfil Administrador"), wxPoint(17,134), wxDefaultSize, 0, _("WxStaticTextIsAdmin"));
+
+    WxRadioButtonIsAdmin = new wxRadioButton(this, ID_WXRADIOBUTTONISADMIN, _(""),  wxPoint(17,154), wxDefaultSize, 0,wxDefaultValidator, _("WxRadioButtonIsAdmin"));
 	SetTitle(_("Novo Usuário"));
 	SetIcon(wxNullIcon);
 	SetSize(8,8,340,240);
 	Center();
-	
+
 	////GUI Items Creation End
 }
 
@@ -110,15 +113,18 @@ void NewUser::WxButton1Click(wxCommandEvent& event)
 	wxString nome = WxEdit1->GetValue();
 	wxString login = WxEdit2->GetValue();
 	wxString senha = WxEdit3->GetValue();
+
+    wxString IsAdmin =  (WxRadioButtonIsAdmin->GetValue()) ? "1" : "0";
+
 	ComandosBD* con;
-    int resultado = con->InsertSql("insert into usuarios(id, nome, login, senha) values(null,'"+nome+"' , '"+login+"', '"+md5(std::string(senha.mb_str()))+"');");
+    int resultado = con->InsertSql("insert into usuarios(id, nome, login, senha,is_admin) values(null,'"+nome+"' , '"+login+"', '"+md5(std::string(senha.mb_str()))+"',"+IsAdmin+");");
     if (resultado == 1){
         wxLogMessage("Salvo com sucesso!");
         Log* S_Log;
         S_Log->Salva_Log(3);
     }
 
-   
+
 
 }
 
