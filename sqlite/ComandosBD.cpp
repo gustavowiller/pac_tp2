@@ -2,7 +2,7 @@
 
 void ComandosBD::InserirUsuarios(){
     //*******************   Faz a conexão com o banco de dados
-    const wxString gszFile = _T("test.db");
+    const wxString gszFile = _T("development.db");
     //remove(gszFile.mb_str());
     //Intancia a classe de conexão
     wxSQLite3Database* db = new wxSQLite3Database();
@@ -18,7 +18,7 @@ void ComandosBD::InserirUsuarios(){
 }
 
 int ComandosBD::InsertSql(wxString sql){
-    const wxString gszFile = _T("test.db");
+    const wxString gszFile = _T("development.db");
     wxSQLite3Database* db = new wxSQLite3Database();
     db->Open(gszFile);
     //Insere os dados através de comandos SQL
@@ -30,7 +30,7 @@ int ComandosBD::InsertSql(wxString sql){
 
 int ComandosBD::SelectSql(wxString sql){
     int id = 0;
-    const wxString gszFile = _T("test.db");
+    const wxString gszFile = _T("development.db");
     wxSQLite3Database* db = new wxSQLite3Database();
     db->Open(gszFile);
     ///**** Consulta os dados attravés de comando sql
@@ -48,7 +48,7 @@ int ComandosBD::SelectSql(wxString sql){
 
 wxString ComandosBD::SelectSqlUser(wxString sql){
     wxString user;
-    const wxString gszFile = _T("test.db");
+    const wxString gszFile = _T("development.db");
     wxSQLite3Database* db = new wxSQLite3Database();
     db->Open(gszFile);
     ///**** Consulta os dados attravés de comando sql

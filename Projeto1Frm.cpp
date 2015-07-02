@@ -106,7 +106,6 @@ Projeto1Frm::Projeto1Frm(wxWindow *parent, int is_admin, wxWindowID id, const wx
 {
     this->is_admin = is_admin;
 	CreateGUIControls();
-
 }
 
 Projeto1Frm::~Projeto1Frm()

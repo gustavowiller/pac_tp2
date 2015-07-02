@@ -11,6 +11,8 @@ public:
     int InsertSql(wxString sql);
     int SelectSql(wxString sql);
     wxString SelectSqlUser(wxString sql);
+    wxString gszFile;
+    ComandosBD();
 };
 
 

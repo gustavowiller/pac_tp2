@@ -80,8 +80,6 @@ void Log::Salva_Log_Processo(int t1,int t2, int t3, int e1, int e2){
     wxString we2;
     we2 << e2;
 
-
-
     ComandosBD* con;
     int resultado = con->InsertSql("insert into log_processo(id, tanque_1, tanque_2, tanque_3, entrada_tanque_1, entrada_tanque_2, usuario, data) values(null,"+wt1+","+wt2+","+wt3+"',"+we1+","+we2+"',"+id_usuario+",  '"+data_hora+"');");
     if (resultado == 0){
